@@ -1,0 +1,3249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Ayesha Salon & Academy — Premier Ladies Salon & Masterclasses | Kausa Mumbra</title>
+  
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdf4f5',
+              100: '#fbe8eb',
+              200: '#f7d5da',
+              300: '#f0b4bd',
+              400: '#e58596',
+              500: '#d65b73',
+              600: '#bf3d59',
+              700: '#a12d46',
+              800: '#86283d',
+              900: '#722537',
+              950: '#400f1b',
+            },
+            gold: {
+              100: '#fdf6e2',
+              200: '#fbeabf',
+              300: '#f8dc94',
+              400: '#f3c760',
+              500: '#eab034',
+              600: '#cc8f22',
+              700: '#a36b1b',
+              800: '#84531c',
+              900: '#6d431b',
+            },
+            dark: {
+              900: '#0a0809',
+              800: '#140f12',
+              700: '#1f161c',
+              600: '#2d1f28',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar & Luxury Glassmorphism */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0809;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #86283d;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #bf3d59;
+    }
+
+    .glass-panel {
+      background: rgba(20, 15, 18, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(240, 180, 189, 0.14);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #f8dc94 0%, #eab034 50%, #fbeabf 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .rose-gradient-text {
+      background: linear-gradient(135deg, #f7d5da 0%, #e58596 50%, #fbe8eb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #f3c760 0%, #cc8f22 100%);
+      color: #0a0809;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(234, 176, 52, 0.3);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(234, 176, 52, 0.5);
+    }
+    .btn-rose {
+      background: linear-gradient(135deg, #d65b73 0%, #a12d46 100%);
+      color: #ffffff;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(214, 91, 115, 0.35);
+    }
+    .btn-rose:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(214, 91, 115, 0.55);
+    }
+
+    /* Anti-Piracy Watermark Canvas Protection */
+    .protected-video-container {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+    #watermarkCanvas {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 30;
+    }
+
+    /* Studio Photo Enhancer filter */
+    .studio-photo {
+      filter: contrast(1.04) brightness(1.02);
+      transition: transform 0.5s ease;
+    }
+    .studio-photo:hover {
+      transform: scale(1.04);
+    }
+
+    /* Strict Perfect Circular Logo */
+    .perfect-circle-logo {
+      border-radius: 9999px !important;
+      aspect-ratio: 1 / 1 !important;
+      object-fit: cover !important;
+      flex-shrink: 0 !important;
+      display: block !important;
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen relative overflow-x-hidden">
+
+  <!-- Background Ambient Luxury Glows -->
+  <div class="fixed top-[-150px] left-[-150px] w-[500px] h-[500px] bg-brand-700/20 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-[-150px] right-[-150px] w-[600px] h-[600px] bg-gold-600/15 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+  <div class="fixed top-[40%] right-[10%] w-[350px] h-[350px] bg-brand-900/30 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+  <!-- TOP BANNER (INSTAGRAM & SOCIAL ANNOUNCEMENT) -->
+  <div class="bg-gradient-to-r from-brand-900 via-brand-700 to-gold-800 text-xs py-2 px-4 text-center font-medium flex items-center justify-between gap-3 border-b border-brand-500/20 shadow-md">
+    <div class="hidden sm:flex items-center gap-3">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-gold-400 text-dark-900 uppercase tracking-wider animate-pulse">
+        ✂️ We Are Hiring
+      </span>
+      <span>Hiring Hair Dresser at Ayesha Salon & Academy Kausa Mumbra!</span>
+      <a href="#hiring" class="underline hover:text-gold-300 font-bold">View Job Details &rarr;</a>
+    </div>
+
+    <!-- Social Media Quick Links -->
+    <div class="flex items-center gap-4 mx-auto sm:mx-0 text-xs">
+      <span class="text-gray-300 text-[11px] hidden md:inline">Follow Us:</span>
+      <a href="https://www.instagram.com/ayesha_salon_mumbra/" target="_blank" class="hover:text-gold-300 flex items-center gap-1 font-semibold" title="Instagram">
+        <i data-lucide="instagram" class="w-3.5 h-3.5 text-pink-400"></i> <span class="hidden sm:inline">Instagram</span>
+      </a>
+      <a href="https://www.youtube.com/@ayesha_salon_mumbra" target="_blank" class="hover:text-gold-300 flex items-center gap-1 font-semibold" title="YouTube">
+        <i data-lucide="youtube" class="w-3.5 h-3.5 text-red-400"></i> <span class="hidden sm:inline">YouTube</span>
+      </a>
+      <a href="https://www.facebook.com/ayesha.salon.mumbra" target="_blank" class="hover:text-gold-300 flex items-center gap-1 font-semibold" title="Facebook">
+        <i data-lucide="facebook" class="w-3.5 h-3.5 text-blue-400"></i> <span class="hidden sm:inline">Facebook</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 w-full glass-panel border-b border-white/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo & Exact Name -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-gold-600 via-brand-500 to-gold-300 p-[2px] shadow-xl shadow-brand-950/60 shrink-0 aspect-square flex items-center justify-center">
+          <img src="logo.jpg" alt="Ayesha Salon & Academy Logo" class="w-full h-full rounded-full object-cover aspect-square perfect-circle-logo group-hover:scale-105 transition-transform duration-300">
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-bold tracking-wide text-white flex items-center gap-1.5">
+            Ayesha <span class="gold-gradient-text">Salon & Academy</span>
+          </span>
+          <span class="text-[10px] text-brand-300 tracking-[0.2em] uppercase block font-semibold">Ladies Salon & Professional Academy • Kausa Mumbra</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-medium text-gray-300">
+        <a href="#salon" class="hover:text-gold-300 transition-colors flex items-center gap-1">
+          <i data-lucide="scissors" class="w-3.5 h-3.5 text-brand-400"></i> Services
+        </a>
+        <a href="#interior" class="hover:text-gold-300 transition-colors flex items-center gap-1">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-400"></i> Studio Tour
+        </a>
+        <a href="#free-videos" class="hover:text-gold-300 transition-colors flex items-center gap-1">
+          <i data-lucide="play" class="w-3.5 h-3.5 text-brand-300"></i> Free Videos
+        </a>
+        <a href="#hiring" class="hover:text-gold-300 transition-colors flex items-center gap-1 text-gold-300 font-bold">
+          <i data-lucide="briefcase" class="w-3.5 h-3.5 text-gold-400"></i> Hiring!
+        </a>
+        <a href="#courses" class="hover:text-gold-300 transition-colors flex items-center gap-1">
+          <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-gold-400"></i> Masterclasses
+        </a>
+        <a href="#live-room" class="hover:text-gold-300 transition-colors flex items-center gap-1 text-red-400 font-bold">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+          </span>
+          Live Class
+        </a>
+        <a href="#contact" class="hover:text-gold-300 transition-colors flex items-center gap-1">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-400"></i> Contact
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Auth Profile -->
+      <div class="flex items-center gap-3">
+        <!-- Admin Toggle Button -->
+        <button onclick="toggleAdminPanel()" class="text-xs px-3 py-1.5 rounded-lg border border-gold-500/30 text-gold-300 hover:bg-gold-500/10 transition-colors hidden sm:flex items-center gap-1.5 font-medium" title="Ayesha Salon & Academy Admin Dashboard">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-400"></i>
+          <span>Owner Admin</span>
+        </button>
+
+        <!-- User Logged In State / Auth Trigger -->
+        <div id="navAuthContainer">
+          <button onclick="openAuthModal()" class="btn-rose text-xs sm:text-sm px-4 py-2.5 rounded-full flex items-center gap-2 font-medium">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span>Student Login</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-dark-800 text-gray-200 hover:text-white border border-white/10">
+          <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-dark-900/95 backdrop-blur-xl px-6 py-6 space-y-4">
+      <a href="#salon" onclick="toggleMobileMenu()" class="block py-2 text-base text-gray-200 hover:text-gold-300 flex items-center gap-3">
+        <i data-lucide="scissors" class="w-5 h-5 text-brand-400"></i> Salon Services
+      </a>
+      <a href="#interior" onclick="toggleMobileMenu()" class="block py-2 text-base text-gray-200 hover:text-gold-300 flex items-center gap-3">
+        <i data-lucide="sparkles" class="w-5 h-5 text-gold-400"></i> Studio Tour
+      </a>
+      <a href="#free-videos" onclick="toggleMobileMenu()" class="block py-2 text-base text-gray-200 hover:text-gold-300 flex items-center gap-3">
+        <i data-lucide="play" class="w-5 h-5 text-brand-300"></i> Free Salon Videos
+      </a>
+      <a href="#hiring" onclick="toggleMobileMenu()" class="block py-2 text-base text-gold-400 font-bold hover:text-gold-300 flex items-center gap-3">
+        <i data-lucide="briefcase" class="w-5 h-5 text-gold-400"></i> We Are Hiring! (Hair Dresser)
+      </a>
+      <a href="#courses" onclick="toggleMobileMenu()" class="block py-2 text-base text-gray-200 hover:text-gold-300 flex items-center gap-3">
+        <i data-lucide="graduation-cap" class="w-5 h-5 text-gold-400"></i> Online Masterclasses
+      </a>
+      <a href="#live-room" onclick="toggleMobileMenu()" class="block py-2 text-base text-red-400 font-bold hover:text-gold-300 flex items-center gap-3">
+        <i data-lucide="video" class="w-5 h-5 text-red-400"></i> Live Class Arena
+      </a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-base text-gray-200 hover:text-gold-300 flex items-center gap-3">
+        <i data-lucide="map-pin" class="w-5 h-5 text-brand-400"></i> Kausa Studio & Contact
+      </a>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+        <a href="tel:+917678030405" class="w-full py-2.5 rounded-xl bg-brand-900/40 text-brand-300 text-center font-semibold text-xs flex items-center justify-center gap-2 border border-brand-500/20">
+          <i data-lucide="phone" class="w-4 h-4"></i> Call: +91 76 78 03 04 05
+        </a>
+        <button onclick="toggleAdminPanel(); toggleMobileMenu();" class="w-full py-2.5 rounded-xl border border-gold-500/40 text-gold-300 text-center font-medium flex items-center justify-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4"></i> Ayesha Salon & Academy Owner Portal
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-950/80 border border-brand-500/30 text-brand-300 text-xs sm:text-sm font-semibold tracking-wide">
+            <i data-lucide="award" class="w-4 h-4 text-gold-400"></i>
+            <span>Premier Ladies Salon & Academy in Kausa Mumbra</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
+            Ayesha Salon & <br class="hidden sm:inline" />
+            <span class="gold-gradient-text">Academy</span>
+          </h1>
+
+          <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Experience signature royal bridal transformations, expert hair botox, skin treatments, and nail extensions at our Kausa Mumbra studio. Plus, learn professional bridal artistry from certified masters at <b>Ayesha Salon & Academy</b> through our <b>Live & Recorded Masterclasses</b>.
+          </p>
+
+          <!-- Quick Contact Highlights -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs text-gray-300 font-medium pt-1">
+            <span class="flex items-center gap-1.5 bg-dark-800/80 px-3.5 py-1.5 rounded-full border border-gold-500/20 text-gold-300"><i data-lucide="clock" class="w-3.5 h-3.5 text-gold-400"></i> <span><b>Mon–Sat:</b> 11:00 AM – 09:00 PM | <b>Sun:</b> 12:00 PM – 08:00 PM</span></span>
+            <span class="flex items-center gap-1.5 bg-dark-800/80 px-3.5 py-1.5 rounded-full border border-brand-500/20 text-white font-bold"><i data-lucide="phone" class="w-3.5 h-3.5 text-brand-400"></i> +91 76 78 03 04 05</span>
+            <span class="flex items-center gap-1.5 bg-dark-800/80 px-3.5 py-1.5 rounded-full border border-white/10"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-green-400"></i> Kausa, Mumbra</span>
+          </div>
+
+          <!-- Dual CTAs (Salon Appointment & Masterclasses) -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+            <a href="#courses" class="w-full sm:w-auto btn-gold px-8 py-4 rounded-2xl flex items-center justify-center gap-3 text-base shadow-xl">
+              <i data-lucide="play-circle" class="w-5 h-5 text-dark-900"></i>
+              <span>Explore Masterclasses</span>
+            </a>
+
+            <a href="https://wa.me/917678030405?text=Hi%20Ayesha%20Salon%20%26%20Academy,%20I%20want%20to%20inquire%20about%20Salon%20Services%20and%20Book%20an%20Appointment." target="_blank" class="w-full sm:w-auto glass-panel hover:bg-brand-900/40 text-white px-7 py-4 rounded-2xl flex items-center justify-center gap-3 border border-brand-500/30 transition-all text-base">
+              <i data-lucide="message-circle" class="w-5 h-5 text-green-400"></i>
+              <span>Book on WhatsApp (+91 76 78 03 04 05)</span>
+            </a>
+          </div>
+
+          <!-- Social Links Strip -->
+          <div class="pt-4 flex items-center justify-center lg:justify-start gap-4 text-xs">
+            <a href="https://www.instagram.com/ayesha_salon_mumbra/" target="_blank" class="glass-panel px-3.5 py-2 rounded-xl text-pink-300 hover:text-white border border-pink-500/30 flex items-center gap-2">
+              <i data-lucide="instagram" class="w-4 h-4 text-pink-400"></i> @ayesha_salon_mumbra
+            </a>
+            <a href="https://www.youtube.com/@ayesha_salon_mumbra" target="_blank" class="glass-panel px-3.5 py-2 rounded-xl text-red-300 hover:text-white border border-red-500/30 flex items-center gap-2">
+              <i data-lucide="youtube" class="w-4 h-4 text-red-400"></i> YouTube Channel
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual Showcase / Instagram Teaser Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md rounded-3xl overflow-hidden glass-panel p-2 shadow-2xl shadow-brand-950 border border-gold-500/20">
+            
+            <!-- Video Teaser Mockup -->
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-dark-800 group">
+              <img src="images/enhanced_interior_wide.jpg" alt="Ayesha Salon & Academy Studio" class="w-full h-full object-cover studio-photo brightness-95">
+              
+              <!-- Video Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent flex flex-col justify-between p-6">
+                <div class="flex justify-between items-start">
+                  <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-600 text-white flex items-center gap-1.5 shadow-lg">
+                    <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                    Kausa Studio
+                  </span>
+                  <span class="glass-panel text-gold-300 text-xs px-2.5 py-1 rounded-lg border border-gold-500/30">
+                    Ladies Only
+                  </span>
+                </div>
+
+                <div>
+                  <a href="#interior" class="w-16 h-16 mx-auto mb-4 rounded-full bg-gold-400 text-dark-900 flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer">
+                    <i data-lucide="eye" class="w-7 h-7"></i>
+                  </a>
+                  <h3 class="font-serif text-xl font-bold text-white text-center">Take A Virtual Studio Tour</h3>
+                  <p class="text-xs text-gray-300 text-center mt-1">Explore our private salon booths & academy arena</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Highlights Badge -->
+            <div class="mt-3 p-3 rounded-xl bg-dark-800/80 border border-white/5 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-green-950 border border-green-500/30 flex items-center justify-center text-green-400">
+                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-white">100% Hygienic & Private</div>
+                  <div class="text-[11px] text-gray-400">Exclusive Ladies Environment</div>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-gold-400">Opp. Sahil Hotel</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WE ARE HIRING HAIR DRESSER SECTION -->
+  <section id="hiring" class="py-16 relative bg-gradient-to-b from-dark-900 via-brand-950/40 to-dark-900 border-y border-gold-500/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="rounded-3xl glass-panel border border-gold-500/40 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Hiring Poster Preview (5 Cols) -->
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl overflow-hidden shadow-2xl border border-gold-500/30 group relative">
+              <img src="images/hiring.jpg" alt="We Are Hiring Hair Dresser at Ayesha Salon & Academy" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1.5 animate-pulse">
+                <i data-lucide="flame" class="w-3.5 h-3.5"></i> Urgent Hiring!
+              </div>
+            </div>
+          </div>
+
+          <!-- Hiring Text & Requirements (7 Cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="briefcase" class="w-4 h-4"></i> Career Opportunity at Ayesha Salon & Academy
+            </div>
+
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+              We Are Hiring! <br />
+              <span class="gold-gradient-text">Female Hair Dresser</span>
+            </h2>
+
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Join the professional team at Ayesha Salon & Academy and grow your beauty career with expert mentorship, high-paying clients, and great work culture in Kausa Mumbra.
+            </p>
+
+            <!-- Required Skills Grid -->
+            <div class="space-y-2">
+              <div class="text-xs font-bold text-gold-400 uppercase tracking-wider">Required Skills:</div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-gray-200">
+                <div class="flex items-center gap-2 bg-dark-800/80 p-2.5 rounded-xl border border-white/5">
+                  <i data-lucide="check-circle2" class="w-4 h-4 text-green-400 shrink-0"></i> Hair Cut & Advanced Styling
+                </div>
+                <div class="flex items-center gap-2 bg-dark-800/80 p-2.5 rounded-xl border border-white/5">
+                  <i data-lucide="check-circle2" class="w-4 h-4 text-green-400 shrink-0"></i> Fashion Hair Colour & Highlights
+                </div>
+                <div class="flex items-center gap-2 bg-dark-800/80 p-2.5 rounded-xl border border-white/5">
+                  <i data-lucide="check-circle2" class="w-4 h-4 text-green-400 shrink-0"></i> Chemical Hair Work (Keratin/Botox)
+                </div>
+                <div class="flex items-center gap-2 bg-dark-800/80 p-2.5 rounded-xl border border-white/5">
+                  <i data-lucide="check-circle2" class="w-4 h-4 text-green-400 shrink-0"></i> Hair Spa & Smoothening
+                </div>
+              </div>
+            </div>
+
+            <!-- Salary & Location -->
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="p-3.5 rounded-2xl bg-dark-800/90 border border-gold-500/20">
+                <div class="text-[11px] text-gray-400 font-semibold">Salary Package:</div>
+                <div class="text-sm font-bold text-gold-400 mt-0.5">Based on Experience & Skills</div>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-dark-800/90 border border-brand-500/20">
+                <div class="text-[11px] text-gray-400 font-semibold">Location:</div>
+                <div class="text-sm font-bold text-white mt-0.5">Kausa, Mumbra (Next to DCB Bank)</div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="pt-2 flex flex-wrap gap-4">
+              <a href="https://wa.me/917678030405?text=Hello%20Ayesha%20Salon%20%26%20Academy,%20I%20am%20interested%20in%20the%20Hair%20Dresser%20Job%20vacancy.%20Here%20are%20my%20details%20and%20experience." target="_blank" class="btn-gold px-7 py-3.5 rounded-xl text-xs font-bold flex items-center gap-2 shadow-xl">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Apply Now on WhatsApp (+91 76 78 03 04 05)
+              </a>
+              <a href="tel:+917678030405" class="glass-panel px-6 py-3.5 rounded-xl text-xs font-semibold text-white border border-white/10 flex items-center gap-2 hover:bg-dark-700">
+                <i data-lucide="phone" class="w-4 h-4 text-brand-400"></i> Call: +91 76 78 03 04 05
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SALON INTERIOR TOUR & ENHANCED PHOTOS -->
+  <section id="interior" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-bold uppercase tracking-wider mb-2">
+          <i data-lucide="sparkles" class="w-4 h-4"></i> Real Salon Ambience
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          Ayesha Salon & Academy <span class="gold-gradient-text">Studio Tour</span>
+        </h2>
+        <p class="text-gray-300 text-sm mt-3">
+          Step into our ultra-hygienic, comfortable and fully equipped private studio in Kausa Mumbra.
+        </p>
+      </div>
+
+      <!-- Real Enhanced Photos Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Photo 1: Wide View / Hydra Machine -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group flex flex-col">
+          <div class="relative aspect-[3/4] overflow-hidden bg-dark-800">
+            <img src="images/enhanced_interior_wide.jpg" alt="Ayesha Salon & Academy Studio" class="w-full h-full object-cover studio-photo">
+            <div class="absolute top-3 left-3 bg-brand-900/90 text-gold-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-gold-500/30">
+              Training & Hydra Station
+            </div>
+          </div>
+          <div class="p-4 bg-dark-900/90 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-serif text-base font-bold text-white">Hydra Facial & Academy Studio</h4>
+              <p class="text-[11px] text-gray-400 mt-1">7-in-1 Hydra machine, ring lights, and live demonstration setup.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2: Pedicure & Manicure Spa -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group flex flex-col">
+          <div class="relative aspect-[3/4] overflow-hidden bg-dark-800">
+            <img src="images/enhanced_interior_pedicure.jpg" alt="Pedicure Spa" class="w-full h-full object-cover studio-photo">
+            <div class="absolute top-3 left-3 bg-gold-900/90 text-gold-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-gold-500/30">
+              Pedicure & Steam Spa
+            </div>
+          </div>
+          <div class="p-4 bg-dark-900/90 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-serif text-base font-bold text-white">Luxury Pedicure & Foot Spa</h4>
+              <p class="text-[11px] text-gray-400 mt-1">Plush leather massage chair, ozone facial steamer, and hygienic tub.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3: Reclining Styling Chair -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group flex flex-col">
+          <div class="relative aspect-[3/4] overflow-hidden bg-dark-800">
+            <img src="images/enhanced_interior_chair.jpg" alt="Styling Chair" class="w-full h-full object-cover studio-photo">
+            <div class="absolute top-3 left-3 bg-brand-900/90 text-brand-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-brand-500/30">
+              Reclining Makeover Chair
+            </div>
+          </div>
+          <div class="p-4 bg-dark-900/90 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-serif text-base font-bold text-white">Signature Bridal Chair</h4>
+              <p class="text-[11px] text-gray-400 mt-1">Ergonomic hydraulic reclining chair for precise bridal eye work and hair spa.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 4: Client Lounge -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group flex flex-col">
+          <div class="relative aspect-[3/4] overflow-hidden bg-dark-800">
+            <img src="images/enhanced_interior_lounge.jpg" alt="Client Lounge" class="w-full h-full object-cover studio-photo">
+            <div class="absolute top-3 left-3 bg-dark-800 text-gray-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-white/10">
+              Client Waiting Area
+            </div>
+          </div>
+          <div class="p-4 bg-dark-900/90 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-serif text-base font-bold text-white">Velvet Lounge & Sterilizer</h4>
+              <p class="text-[11px] text-gray-400 mt-1">Air-conditioned client waiting sofa with UV tool sterilization unit.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PUBLIC / FREE SALON & MAKEOVER VIDEOS SECTION -->
+  <section id="free-videos" class="py-16 bg-dark-800/40 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 text-brand-400 text-xs font-bold uppercase tracking-wider mb-2">
+            <i data-lucide="play" class="w-4 h-4 text-gold-400"></i> Free Watch & Reels
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Ayesha Salon & Academy <span class="rose-gradient-text">Makeover Videos</span>
+          </h2>
+          <p class="text-gray-400 text-sm mt-2">
+            Watch free makeover transformations, hair spa demos, and salon highlights directly without login.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://www.youtube.com/@ayesha_salon_mumbra" target="_blank" class="px-4 py-2.5 rounded-xl bg-red-950 text-red-300 border border-red-500/30 text-xs font-bold flex items-center gap-2 hover:bg-red-900/60 transition-colors">
+            <i data-lucide="youtube" class="w-4 h-4 text-red-400"></i> Subscribe on YouTube
+          </a>
+          <a href="https://www.instagram.com/ayesha_salon_mumbra/" target="_blank" class="px-4 py-2.5 rounded-xl bg-pink-950 text-pink-300 border border-pink-500/30 text-xs font-bold flex items-center gap-2 hover:bg-pink-900/60 transition-colors">
+            <i data-lucide="instagram" class="w-4 h-4 text-pink-400"></i> Follow on Instagram
+          </a>
+        </div>
+      </div>
+
+      <!-- Free Video Cards Grid -->
+      <div id="freeVideosGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Video 1 -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group">
+          <div class="relative aspect-video bg-black">
+            <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="p-5">
+            <span class="text-[10px] font-bold text-gold-400 uppercase tracking-wider">Free Watch</span>
+            <h4 class="font-serif text-base font-bold text-white mt-1">Bridal HD Makeup Transformation Demo</h4>
+            <p class="text-xs text-gray-400 mt-1">Real bride makeover highlights at Ayesha Salon & Academy Kausa.</p>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group">
+          <div class="relative aspect-video bg-black">
+            <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="p-5">
+            <span class="text-[10px] font-bold text-gold-400 uppercase tracking-wider">Free Watch</span>
+            <h4 class="font-serif text-base font-bold text-white mt-1">Hair Botox & Keratin Shine Result</h4>
+            <p class="text-xs text-gray-400 mt-1">Step-by-step frizz control treatment result video.</p>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group">
+          <div class="relative aspect-video bg-black">
+            <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="p-5">
+            <span class="text-[10px] font-bold text-gold-400 uppercase tracking-wider">Free Watch</span>
+            <h4 class="font-serif text-base font-bold text-white mt-1">Hydra Facial Machine Demo & Glow</h4>
+            <p class="text-xs text-gray-400 mt-1">Deep pore vacuum extraction and instant skin glow.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MASTERCLASS & VIDEO COURSES SECTION (LMS HUB) -->
+  <section id="courses" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 text-brand-400 text-xs font-bold uppercase tracking-wider mb-2">
+            <i data-lucide="sparkles" class="w-4 h-4 text-gold-400"></i> Online Academy & Certifications
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Ayesha Salon & Academy <span class="gold-gradient-text">Masterclasses</span>
+          </h2>
+          <p class="text-gray-400 text-sm sm:text-base mt-2 max-w-xl">
+            Watch high-definition step-by-step masterclasses. Join live interactive sessions or watch anytime at your own pace.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex items-center p-1.5 rounded-2xl glass-panel border border-white/10 self-start md:self-auto">
+          <button onclick="filterCourses('all')" id="filter-all" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-brand-600 text-white shadow-md">
+            All Masterclasses
+          </button>
+          <button onclick="filterCourses('live')" id="filter-live" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all text-gray-400 hover:text-white flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-red-500"></span> Live Sessions
+          </button>
+          <button onclick="filterCourses('recorded')" id="filter-recorded" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all text-gray-400 hover:text-white">
+            Recorded HD Videos
+          </button>
+        </div>
+      </div>
+
+      <!-- MASTERCLASS LIFETIME VIP ALL-ACCESS BANNER -->
+      <div class="mb-12 rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-brand-950 via-dark-800 to-gold-950 border-2 border-gold-500/40 shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-12 -top-12 w-48 h-48 bg-gold-400/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
+          
+          <div class="space-y-2 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-300 text-xs font-bold uppercase tracking-wider">
+              👑 Ultimate Value Option
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">
+              VIP All-Access <span class="gold-gradient-text">Lifetime Pass</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-300 max-w-xl">
+              Don't want the 30-day single class expiry? Unlock <b>Lifetime Permanent Access</b> to all current masterclasses + <b>2 new classes added every week</b> + all verified certificates!
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+            <div class="text-center lg:text-right">
+              <span class="text-xs text-gray-400 line-through">₹4,999</span>
+              <div class="text-2xl sm:text-3xl font-bold text-gold-400">₹1,999 <span class="text-xs font-normal text-gray-300">/ Lifetime</span></div>
+              <span class="text-[10px] text-green-400 font-semibold">Never Expires</span>
+            </div>
+
+            <button onclick="openPaymentModal({id: 'vip_lifetime', title: 'VIP All-Access Lifetime Pass', price: 1999, type: 'subscription'})" class="btn-gold px-7 py-4 rounded-2xl font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2">
+              <i data-lucide="crown" class="w-4 h-4 text-dark-900"></i>
+              <span>Get Lifetime VIP Pass</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Course Cards Grid -->
+      <div id="courseCardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Injected via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIVE CLASS ROOM & SECURE PLAYER ARENA -->
+  <section id="live-room" class="py-16 bg-dark-800/60 border-y border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/80 border border-red-500/40 text-red-400 text-xs font-bold uppercase tracking-wider mb-3">
+          <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span> Live Broadcast & Replay Player
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+          Secure Anti-Piracy <span class="rose-gradient-text">Video Player</span>
+        </h2>
+        <p class="text-gray-300 text-sm mt-2">
+          Equipped with <b>Dynamic Moving Watermark Protection</b> (Displays student's Name & Phone Number continuously on screen to prevent unauthorized screen recordings).
+        </p>
+      </div>
+
+      <!-- Player & Live Arena Wrapper -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Video Player Frame (8 Cols) -->
+        <div class="lg:col-span-8 space-y-4">
+          <div class="relative rounded-3xl overflow-hidden glass-panel border border-gold-500/30 shadow-2xl protected-video-container" id="videoWrapper">
+            
+            <!-- Dynamic Anti-Piracy Watermark Canvas -->
+            <canvas id="watermarkCanvas"></canvas>
+
+            <!-- Video Player -->
+            <div class="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
+              <video id="mainVideoPlayer" class="w-full h-full object-cover" controls playsinline controlslist="nodownload" oncontextmenu="return false;" poster="images/enhanced_interior_wide.jpg">
+                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+
+              <!-- Locked Overlay (When Student Has Not Purchased) -->
+              <div id="videoLockOverlay" class="absolute inset-0 bg-dark-900/90 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center z-20 hidden">
+                <div class="w-16 h-16 rounded-full bg-brand-950 border border-brand-500/40 flex items-center justify-center text-gold-400 mb-4 shadow-xl">
+                  <i data-lucide="lock" class="w-8 h-8"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-white mb-2" id="lockedVideoTitle">Class Content is Locked</h3>
+                <p class="text-sm text-gray-300 max-w-md mb-6">
+                  This masterclass is exclusive to enrolled students of Ayesha Salon & Academy. Please purchase the class or activate your VIP Pass to unlock instant HD access.
+                </p>
+                <button onclick="triggerLockedPurchase()" class="btn-gold px-8 py-3.5 rounded-xl font-bold text-sm shadow-xl flex items-center gap-2">
+                  <i data-lucide="unlock" class="w-4 h-4"></i> Unlock Masterclass Now
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Video Info Bar -->
+            <div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-white/10 bg-dark-900/80">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-brand-600 text-white" id="currentPlayingBadge">Recorded Masterclass</span>
+                  <span class="text-xs text-gray-400" id="currentPlayingDuration">Duration: 1h 45m</span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-white mt-1" id="currentPlayingTitle">Professional Bridal Airbrush & HD Makeup Masterclass</h4>
+              </div>
+
+              <!-- Action Controls -->
+              <div class="flex items-center gap-3">
+                <button onclick="downloadCertificate()" class="px-3.5 py-2 rounded-xl glass-panel text-xs text-gold-300 hover:bg-gold-500/10 border border-gold-500/30 flex items-center gap-1.5 font-medium transition-colors">
+                  <i data-lucide="award" class="w-4 h-4 text-gold-400"></i>
+                  <span>Get Certificate</span>
+                </button>
+                <button onclick="askDoubtOnWhatsApp()" class="px-3.5 py-2 rounded-xl bg-green-950 text-xs text-green-300 hover:bg-green-900/50 border border-green-500/30 flex items-center gap-1.5 font-medium transition-colors">
+                  <i data-lucide="help-circle" class="w-4 h-4 text-green-400"></i>
+                  <span>Ask Doubt</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Video Syllabus & Instructor Notes -->
+          <div class="glass-panel p-5 rounded-2xl border border-white/5 space-y-3">
+            <h4 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+              <i data-lucide="book-open" class="w-4 h-4 text-brand-400"></i> What You Learn In This Class:
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-300">
+              <div class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-green-400"></i> Skin prep, primer matching & color correction</div>
+              <div class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-green-400"></i> Foundation shade selection for Indian skin tones</div>
+              <div class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-green-400"></i> Waterproof bridal eye makeup & cut crease</div>
+              <div class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-green-400"></i> 16-Hour long lasting fixing technique</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Interaction & Chat Sidebar (4 Cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          
+          <!-- Live Interactive Chat Room -->
+          <div class="glass-panel rounded-3xl border border-white/10 overflow-hidden flex flex-col h-[520px]">
+            
+            <div class="p-4 border-b border-white/10 bg-dark-900/90 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                </span>
+                <span class="font-serif font-bold text-white text-sm">Live Class Discussion</span>
+              </div>
+              <span class="text-[11px] text-gray-400 bg-dark-800 px-2 py-0.5 rounded-full" id="onlineStudentCount">142 Students Online</span>
+            </div>
+
+            <!-- Messages Stream -->
+            <div class="flex-1 p-4 overflow-y-auto space-y-3 text-xs" id="chatMessageContainer">
+              <div class="flex items-start gap-2.5">
+                <div class="w-7 h-7 rounded-full bg-brand-800 text-white flex items-center justify-center font-bold text-[10px]">ZS</div>
+                <div class="bg-dark-700/80 p-2.5 rounded-2xl rounded-tl-none border border-white/5 max-w-[85%]">
+                  <div class="font-bold text-gold-400 text-[10px]">Zainab Shaikh (Kausa)</div>
+                  <div class="text-gray-200 mt-0.5">Ma'am which setting spray do you recommend for humid weather?</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <div class="w-7 h-7 rounded-full bg-gold-700 text-dark-900 flex items-center justify-center font-bold text-[10px]">AS</div>
+                <div class="bg-brand-950/80 p-2.5 rounded-2xl rounded-tl-none border border-brand-500/30 max-w-[85%]">
+                  <div class="font-bold text-brand-300 text-[10px]">Ayesha Ma'am (Instructor)</div>
+                  <div class="text-gray-100 mt-0.5">Urban Decay All Nighter and Kryolan Fixing Spray are best for Indian bridal longevity!</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <div class="w-7 h-7 rounded-full bg-brand-800 text-white flex items-center justify-center font-bold text-[10px]">AK</div>
+                <div class="bg-dark-700/80 p-2.5 rounded-2xl rounded-tl-none border border-white/5 max-w-[85%]">
+                  <div class="font-bold text-gold-400 text-[10px]">Aafiya Khan</div>
+                  <div class="text-gray-200 mt-0.5">The step 3 eye blending trick was amazing! 😍</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Input Box -->
+            <form onsubmit="handleSendChatMessage(event)" class="p-3 border-t border-white/10 bg-dark-900/90 flex gap-2">
+              <input type="text" id="chatInput" placeholder="Ask question during class..." class="flex-1 bg-dark-800 text-xs px-3 py-2.5 rounded-xl border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-brand-500" required>
+              <button type="submit" class="btn-rose px-3.5 py-2.5 rounded-xl text-xs flex items-center justify-center">
+                <i data-lucide="send" class="w-3.5 h-3.5"></i>
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SALON SERVICES SHOWCASE (LADIES ONLY STUDIO) -->
+  <section id="salon" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-brand-400 text-xs font-bold uppercase tracking-wider mb-2">
+          <i data-lucide="sparkles" class="w-4 h-4 text-gold-400"></i> Complete Ladies Salon Services
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          Luxury Beauty & <span class="gold-gradient-text">Bridal Services</span>
+        </h2>
+        <p class="text-gray-400 text-sm sm:text-base mt-3">
+          100% private, comfortable and hygienic environment for ladies. Pricing customized on consultation & visit.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: Bridal Makeover -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-brand-500/40 transition-all duration-300 group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop" alt="Bridal Makeover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-brand-900/90 text-gold-300 text-xs px-3 py-1 rounded-full border border-gold-500/30 font-semibold">
+              Most Popular
+            </span>
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-300 transition-colors">Royal Bridal & Reception Makeup</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Complete signature HD/Airbrush makeup, 3D lashes, bridal hairstyle, dupatta draping, and jewelry setting.
+            </p>
+            <div class="pt-2 flex items-center justify-between border-t border-white/5">
+              <span class="text-xs font-bold text-gold-400">Pricing on Visit / Call</span>
+              <a href="https://wa.me/917678030405?text=Hello%20Ayesha%20Salon%20%26%20Academy,%20I%20want%20to%20know%20pricing%20and%20details%20for%20Royal%20Bridal%20Makeup." target="_blank" class="px-4 py-2 rounded-xl bg-green-950 text-green-300 border border-green-500/40 text-xs font-semibold hover:bg-green-900/60 transition-colors flex items-center gap-1.5">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Inquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Hair Spa & Treatments -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-brand-500/40 transition-all duration-300 group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop" alt="Hair Treatments" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-300 transition-colors">Keratin, Botox & Nanoplastia</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Frizz-free, mirror-shine smooth hair treatments, deep nourishment spa, professional hair coloring and cuts.
+            </p>
+            <div class="pt-2 flex items-center justify-between border-t border-white/5">
+              <span class="text-xs font-bold text-gold-400">Pricing on Consultation</span>
+              <a href="https://wa.me/917678030405?text=Hello%20Ayesha%20Salon%20%26%20Academy,%20I%20want%20to%20inquire%20about%20Hair%20Botox%20and%20Keratin%20treatments." target="_blank" class="px-4 py-2 rounded-xl bg-green-950 text-green-300 border border-green-500/40 text-xs font-semibold hover:bg-green-900/60 transition-colors flex items-center gap-1.5">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Inquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Skin & Hydra Facials -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-brand-500/40 transition-all duration-300 group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop" alt="Hydra Facial" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-300 transition-colors">Advanced Hydra Facial & Glow Peels</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Deep pore vacuum extraction, antioxidant infusion, skin brightening, anti-tan therapies, and bridal glow facials.
+            </p>
+            <div class="pt-2 flex items-center justify-between border-t border-white/5">
+              <span class="text-xs font-bold text-gold-400">Pricing on Visit</span>
+              <a href="https://wa.me/917678030405?text=Hello%20Ayesha%20Salon%20%26%20Academy,%20I%20want%20to%20know%20about%20Hydra%20Facial%20and%20Skin%20Glow%20treatments." target="_blank" class="px-4 py-2 rounded-xl bg-green-950 text-green-300 border border-green-500/40 text-xs font-semibold hover:bg-green-900/60 transition-colors flex items-center gap-1.5">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Inquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: 3D Nail Art & Extensions -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-brand-500/40 transition-all duration-300 group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop" alt="Nail Art" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-300 transition-colors">Acrylic & Gel Nail Extensions</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Bridal chrome nails, Russian manicure, 3D stone work, ombre french tips, and long-lasting gel polishes.
+            </p>
+            <div class="pt-2 flex items-center justify-between border-t border-white/5">
+              <span class="text-xs font-bold text-gold-400">Pricing on Visit</span>
+              <a href="https://wa.me/917678030405?text=Hello%20Ayesha%20Salon%20%26%20Academy,%20I%20want%20to%20inquire%20about%20Nail%20Extensions%20and%20Art." target="_blank" class="px-4 py-2 rounded-xl bg-green-950 text-green-300 border border-green-500/40 text-xs font-semibold hover:bg-green-900/60 transition-colors flex items-center gap-1.5">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Inquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: Bridal & Arabian Mehendi -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-brand-500/40 transition-all duration-300 group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1599818816912-140f7b03887c?q=80&w=800&auto=format&fit=crop" alt="Mehendi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-300 transition-colors">Arabic, Dubai & Bridal Mehendi</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Organic dark stain henna, intricate figure portraits, jewelry style mehendi for brides and family functions.
+            </p>
+            <div class="pt-2 flex items-center justify-between border-t border-white/5">
+              <span class="text-xs font-bold text-gold-400">Pricing on Visit</span>
+              <a href="https://wa.me/917678030405?text=Hello%20Ayesha%20Salon%20%26%20Academy,%20I%20want%20to%20book%20Bridal%20Mehendi%20artist." target="_blank" class="px-4 py-2 rounded-xl bg-green-950 text-green-300 border border-green-500/40 text-xs font-semibold hover:bg-green-900/60 transition-colors flex items-center gap-1.5">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Inquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6: Waxing, Threading & Body Care -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-brand-500/40 transition-all duration-300 group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=800&auto=format&fit=crop" alt="Spa Care" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-300 transition-colors">Rica Waxing & Full Body Polishing</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Italian painless lipo waxing, body detan pack, back polishing, herbal manicure & pedicure.
+            </p>
+            <div class="pt-2 flex items-center justify-between border-t border-white/5">
+              <span class="text-xs font-bold text-gold-400">Pricing on Visit</span>
+              <a href="https://wa.me/917678030405?text=Hello%20Ayesha%20Salon%20%26%20Academy,%20I%20want%20to%20inquire%20about%20Salon%20packages%20and%20waxing." target="_blank" class="px-4 py-2 rounded-xl bg-green-950 text-green-300 border border-green-500/40 text-xs font-semibold hover:bg-green-900/60 transition-colors flex items-center gap-1.5">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Inquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEDICATED OWNER / DEVELOPER ADMIN LOGIN MODAL -->
+  <div id="adminAuthModal" class="fixed inset-0 z-50 bg-dark-900/90 backdrop-blur-xl flex items-center justify-center p-4 hidden">
+    <div class="glass-panel w-full max-w-md p-6 sm:p-8 rounded-3xl border border-gold-500/40 shadow-2xl relative">
+      
+      <button onclick="closeAdminAuthModal()" class="absolute top-4 right-4 p-2 rounded-xl text-gray-400 hover:text-white bg-dark-800">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden border-2 border-gold-400 bg-black shrink-0 aspect-square p-[1px]">
+          <img src="logo.jpg" alt="Ayesha Salon & Academy Logo" class="w-full h-full rounded-full object-cover aspect-square perfect-circle-logo">
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-white">Owner & Staff Login</h3>
+        <p class="text-xs text-gray-300 mt-1">Authorized access for Ayesha Salon & Academy Portal</p>
+      </div>
+
+      <form onsubmit="handleAdminLogin(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block text-gray-300 font-bold mb-1">User ID / Username *</label>
+          <div class="relative">
+            <i data-lucide="user-check" class="w-4 h-4 text-gray-400 absolute left-3.5 top-3"></i>
+            <input type="text" id="adminLoginUser" placeholder="Enter Admin Username" class="w-full bg-dark-800 text-xs pl-10 pr-4 py-2.5 rounded-xl border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400" required>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-bold mb-1">Security Password *</label>
+          <div class="relative">
+            <i data-lucide="lock" class="w-4 h-4 text-gray-400 absolute left-3.5 top-3"></i>
+            <input type="password" id="adminLoginPass" placeholder="••••••••••••" class="w-full bg-dark-800 text-xs pl-10 pr-10 py-2.5 rounded-xl border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400" required>
+            <button type="button" onclick="toggleAdminPassVisibility()" class="absolute right-3 top-2.5 text-gray-400 hover:text-white">
+              <i data-lucide="eye" id="passToggleIcon" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Role Info Helper -->
+        <div class="p-3 rounded-xl bg-dark-800/90 border border-white/5 text-[11px] text-gray-400 space-y-1">
+          <div class="flex items-center gap-1.5 text-gold-300 font-semibold">
+            <i data-lucide="shield" class="w-3.5 h-3.5"></i> Protected Role-Based System
+          </div>
+          <div>• <b>Client Login:</b> Upload masterclasses, salon videos & view student leads.</div>
+          <div>• <b>Master Admin (You):</b> Full developer control & security management.</div>
+        </div>
+
+        <button type="submit" class="w-full btn-gold py-3.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-xl mt-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-dark-900"></i>
+          <span>Secure Sign In</span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- OWNER ADMIN DASHBOARD & STUDENT CRM MODAL / PANEL -->
+  <div id="adminPanelModal" class="fixed inset-0 z-50 bg-dark-900/95 backdrop-blur-2xl overflow-y-auto hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- Admin Header -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-white/10 gap-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-gold-500/40 bg-black shrink-0 aspect-square p-[1px]">
+            <img src="logo.jpg" alt="Ayesha Salon & Academy Logo" class="w-full h-full rounded-full object-cover aspect-square perfect-circle-logo">
+          </div>
+          <div>
+            <h2 class="font-serif text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+              Ayesha Salon & Academy Owner Portal & <span class="gold-gradient-text">Student CRM</span>
+            </h2>
+            <div class="flex items-center gap-2 mt-1">
+              <span id="currentAdminRoleBadge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-green-950 text-green-300 border border-green-500/30">
+                🟢 Client Access (Media & Leads Only)
+              </span>
+              <span class="text-[11px] text-gray-400">Core website code is protected</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 self-end md:self-auto">
+          <!-- Admin Logout -->
+          <button onclick="handleAdminLogout()" class="px-3.5 py-2 rounded-xl bg-red-950/80 text-red-300 border border-red-500/30 hover:bg-red-900/60 text-xs font-bold flex items-center gap-1.5 transition-colors">
+            <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Logout
+          </button>
+          
+          <button onclick="closeAdminPanel()" class="p-2.5 rounded-xl bg-dark-800 text-gray-300 hover:text-white border border-white/10">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Overview Cards -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 my-8">
+        <div class="glass-panel p-5 rounded-2xl border border-white/10">
+          <div class="text-xs font-medium text-gray-400">Total Registered Students</div>
+          <div class="text-3xl font-bold text-white mt-1" id="adminTotalStudents">0</div>
+          <div class="text-[11px] text-green-400 mt-1 flex items-center gap-1">
+            <i data-lucide="trending-up" class="w-3 h-3"></i> Instagram Leads Active
+          </div>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl border border-white/10">
+          <div class="text-xs font-medium text-gray-400">Total Revenue Earned</div>
+          <div class="text-3xl font-bold text-gold-400 mt-1" id="adminTotalRevenue">₹0</div>
+          <div class="text-[11px] text-gold-300 mt-1">UPI & Razorpay Instant Payout</div>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl border border-white/10">
+          <div class="text-xs font-medium text-gray-400">Live & Video Classes</div>
+          <div class="text-3xl font-bold text-brand-300 mt-1" id="adminTotalCourses">5</div>
+          <div class="text-[11px] text-gray-400 mt-1">Active on Platform</div>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl border border-white/10">
+          <div class="text-xs font-medium text-gray-400">WhatsApp Leads Ready</div>
+          <div class="text-3xl font-bold text-green-400 mt-1" id="adminTotalLeads">0</div>
+          <div class="text-[11px] text-green-300 mt-1">1-Click Broadcast Ready</div>
+        </div>
+      </div>
+
+      <!-- Admin Tabs (Student Leads CRM vs Add New Class vs Upload Media) -->
+      <div class="flex items-center gap-3 mb-6 border-b border-white/10 pb-4 overflow-x-auto">
+        <button onclick="switchAdminTab('crm')" id="adminTabCRM" class="px-5 py-2.5 rounded-xl font-bold text-sm bg-gold-400 text-dark-900 shadow-md whitespace-nowrap">
+          <i data-lucide="users" class="w-4 h-4 inline mr-1.5"></i> Student Leads List (Gmail & Phone)
+        </button>
+        <button onclick="switchAdminTab('upload')" id="adminTabUpload" class="px-5 py-2.5 rounded-xl font-bold text-sm text-gray-400 hover:text-white glass-panel whitespace-nowrap">
+          <i data-lucide="upload" class="w-4 h-4 inline mr-1.5"></i> Upload Video Masterclass / Live
+        </button>
+        <button onclick="switchAdminTab('media')" id="adminTabMedia" class="px-5 py-2.5 rounded-xl font-bold text-sm text-gray-400 hover:text-white glass-panel whitespace-nowrap">
+          <i data-lucide="film" class="w-4 h-4 inline mr-1.5"></i> Add Free Salon Video / Photo
+        </button>
+        <!-- MASTER DEVELOPER TAB (VISIBLE ONLY TO SUPER ADMIN) -->
+        <button onclick="switchAdminTab('dev')" id="adminTabDev" class="px-5 py-2.5 rounded-xl font-bold text-sm text-purple-400 hover:text-purple-300 glass-panel whitespace-nowrap hidden border border-purple-500/30">
+          <i data-lucide="shield-alert" class="w-4 h-4 inline mr-1.5"></i> Developer Master Controls (You)
+        </button>
+      </div>
+
+      <!-- TAB 1: STUDENT LEADS CRM TABLE -->
+      <div id="adminCRMSection" class="space-y-4">
+        
+        <!-- Search & Export Toolbar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl glass-panel border border-white/10">
+          <div class="relative w-full sm:w-80">
+            <i data-lucide="search" class="w-4 h-4 text-gray-400 absolute left-3.5 top-3"></i>
+            <input type="text" id="leadSearchInput" oninput="renderStudentLeadsTable()" placeholder="Search by name, phone or email..." class="w-full bg-dark-800 text-xs pl-10 pr-4 py-2.5 rounded-xl border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400">
+          </div>
+
+          <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+            <!-- EXPORT TO EXCEL / CSV BUTTON -->
+            <button onclick="exportStudentsToCSV()" class="btn-gold px-4 py-2.5 rounded-xl text-xs flex items-center gap-2 font-bold shadow-lg">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Download Excel/CSV List</span>
+            </button>
+
+            <!-- ADD STUDENT MANUALLY -->
+            <button onclick="openAddStudentModal()" class="glass-panel text-white hover:bg-dark-700 px-4 py-2.5 rounded-xl text-xs flex items-center gap-2 font-semibold border border-white/10">
+              <i data-lucide="user-plus" class="w-4 h-4 text-brand-300"></i>
+              <span>Add Walk-in Student</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Student CRM Table -->
+        <div class="rounded-2xl glass-panel border border-white/10 overflow-x-auto">
+          <table class="w-full text-left text-xs text-gray-300">
+            <thead class="bg-dark-800/90 text-gray-400 uppercase tracking-wider text-[11px] border-b border-white/10">
+              <tr>
+                <th class="py-3.5 px-4 font-semibold">Student Name</th>
+                <th class="py-3.5 px-4 font-semibold">WhatsApp Number</th>
+                <th class="py-3.5 px-4 font-semibold">Gmail / Email</th>
+                <th class="py-3.5 px-4 font-semibold">Enrolled Class / Status</th>
+                <th class="py-3.5 px-4 font-semibold">Amount Paid</th>
+                <th class="py-3.5 px-4 font-semibold text-right">Instant Action</th>
+              </tr>
+            </thead>
+            <tbody id="studentLeadsTableBody" class="divide-y divide-white/5">
+              <!-- Dynamically rendered -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- TAB 2: UPLOAD & SCHEDULE MASTERCLASS -->
+      <div id="adminUploadSection" class="hidden glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 max-w-3xl">
+        <h3 class="font-serif text-xl font-bold text-white mb-6">Create New Video Masterclass or Live Schedule</h3>
+        
+        <form onsubmit="handleCreateNewClass(event)" class="space-y-4 text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-300 font-semibold mb-1.5">Class Title *</label>
+              <input type="text" id="newClassTitle" placeholder="e.g. Advanced Arabian Eye Makeup" class="w-full bg-dark-800 px-3.5 py-3 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400" required>
+            </div>
+            <div>
+              <label class="block text-gray-300 font-semibold mb-1.5">Class Format *</label>
+              <select id="newClassType" class="w-full bg-dark-800 px-3.5 py-3 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400" required>
+                <option value="recorded">Recorded HD Video Class</option>
+                <option value="live">Live Streaming / Google Meet Class</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-300 font-semibold mb-1.5">Price (in INR ₹) *</label>
+              <input type="number" id="newClassPrice" placeholder="e.g. 499" class="w-full bg-dark-800 px-3.5 py-3 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400" required>
+            </div>
+            <div>
+              <label class="block text-gray-300 font-semibold mb-1.5">Duration / Live Date *</label>
+              <input type="text" id="newClassDuration" placeholder="e.g. 2 Hours or Sunday 4:00 PM" class="w-full bg-dark-800 px-3.5 py-3 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400" required>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-gray-300 font-semibold mb-1.5">Video File URL or Google Meet Link *</label>
+            <input type="url" id="newClassVideoUrl" placeholder="https://... (Cloudflare / Vimeo / YouTube unlisted / Meet link)" class="w-full bg-dark-800 px-3.5 py-3 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400" required>
+          </div>
+
+          <div>
+            <label class="block text-gray-300 font-semibold mb-1.5">Thumbnail Image URL / Local Path</label>
+            <input type="text" id="newClassThumbnail" placeholder="images/enhanced_interior_wide.jpg or image link" class="w-full bg-dark-800 px-3.5 py-3 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400">
+          </div>
+
+          <div>
+            <label class="block text-gray-300 font-semibold mb-1.5">Description & Syllabus</label>
+            <textarea id="newClassDesc" rows="3" placeholder="Brief outline of what will be taught in this session..." class="w-full bg-dark-800 px-3.5 py-3 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400"></textarea>
+          </div>
+
+          <div class="pt-4 flex justify-end gap-3">
+            <button type="button" onclick="switchAdminTab('crm')" class="px-5 py-3 rounded-xl glass-panel text-gray-300 hover:text-white font-medium">Cancel</button>
+            <button type="submit" class="btn-gold px-8 py-3 rounded-xl font-bold text-xs shadow-lg">Publish Masterclass</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- TAB 3: ADD FREE PUBLIC SALON VIDEOS & REELS -->
+      <div id="adminMediaSection" class="hidden glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 max-w-3xl">
+        <h3 class="font-serif text-xl font-bold text-white mb-2">Add Free Salon Video / Reel / Photo</h3>
+        <p class="text-xs text-gray-400 mb-6">These videos will be visible to everyone on the website without any lock.</p>
+
+        <form onsubmit="handleAddFreeVideo(event)" class="space-y-4 text-xs">
+          <div>
+            <label class="block text-gray-300 font-semibold mb-1.5">Video Title *</label>
+            <input type="text" id="freeVidTitle" placeholder="e.g. Keratin Treatment Before & After" class="w-full bg-dark-800 px-3.5 py-3 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400" required>
+          </div>
+
+          <div>
+            <label class="block text-gray-300 font-semibold mb-1.5">Video / Reel URL (Instagram / YouTube / MP4) *</label>
+            <input type="text" id="freeVidUrl" placeholder="https://www.instagram.com/reel/... or YouTube / MP4 link" class="w-full bg-dark-800 px-3.5 py-3 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400" required>
+          </div>
+
+          <div>
+            <label class="block text-gray-300 font-semibold mb-1.5">Thumbnail / Cover Photo (Upload from Laptop or Pick Studio Photo)</label>
+            
+            <!-- DIRECT LOCAL FILE UPLOAD BUTTON -->
+            <div class="mb-3 space-y-2">
+              <input type="file" id="freeVidFileInput" accept="image/*" class="hidden" onchange="handleLocalImageUpload(event, 'create')">
+              <label for="freeVidFileInput" class="w-full py-3 px-4 rounded-xl border-2 border-dashed border-gold-500/50 hover:border-gold-400 bg-gold-950/30 hover:bg-gold-950/60 text-gold-300 font-bold text-xs flex items-center justify-center gap-2 cursor-pointer transition-all shadow-sm">
+                <i data-lucide="folder-up" class="w-4 h-4 text-gold-400"></i>
+                <span id="freeVidFileName">📁 Choose Photo from Laptop / Phone Storage</span>
+              </label>
+              <div id="freeVidPreviewContainer" class="hidden flex items-center gap-3 p-2 rounded-xl bg-dark-700 border border-gold-500/30">
+                <img id="freeVidPreviewImg" class="w-16 h-12 object-cover rounded-lg">
+                <div class="text-[11px] text-green-400 font-bold flex items-center gap-1">
+                  <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Device Image Loaded
+                </div>
+              </div>
+            </div>
+
+            <div class="text-[10px] text-gray-400 mb-1 font-semibold uppercase tracking-wider">Or Select Studio Interior Photo:</div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-2">
+              <button type="button" onclick="selectFreeVidPoster('images/enhanced_interior_wide.jpg', this)" class="p-1.5 rounded-xl border border-gold-500/40 bg-dark-700 text-left hover:border-gold-400 focus:ring-1 focus:ring-gold-400 group">
+                <img src="images/enhanced_interior_wide.jpg" class="w-full h-12 object-cover rounded-lg mb-1">
+                <div class="text-[10px] text-white font-semibold truncate">Studio Arena</div>
+              </button>
+              <button type="button" onclick="selectFreeVidPoster('images/enhanced_interior_pedicure.jpg', this)" class="p-1.5 rounded-xl border border-white/10 bg-dark-700 text-left hover:border-gold-400 focus:ring-1 focus:ring-gold-400 group">
+                <img src="images/enhanced_interior_pedicure.jpg" class="w-full h-12 object-cover rounded-lg mb-1">
+                <div class="text-[10px] text-white font-semibold truncate">Pedicure Spa</div>
+              </button>
+              <button type="button" onclick="selectFreeVidPoster('images/enhanced_interior_chair.jpg', this)" class="p-1.5 rounded-xl border border-white/10 bg-dark-700 text-left hover:border-gold-400 focus:ring-1 focus:ring-gold-400 group">
+                <img src="images/enhanced_interior_chair.jpg" class="w-full h-12 object-cover rounded-lg mb-1">
+                <div class="text-[10px] text-white font-semibold truncate">Bridal Chair</div>
+              </button>
+              <button type="button" onclick="selectFreeVidPoster('images/enhanced_interior_lounge.jpg', this)" class="p-1.5 rounded-xl border border-white/10 bg-dark-700 text-left hover:border-gold-400 focus:ring-1 focus:ring-gold-400 group">
+                <img src="images/enhanced_interior_lounge.jpg" class="w-full h-12 object-cover rounded-lg mb-1">
+                <div class="text-[10px] text-white font-semibold truncate">Velvet Lounge</div>
+              </button>
+            </div>
+            <input type="text" id="freeVidPoster" value="images/enhanced_interior_wide.jpg" placeholder="Custom image URL or device file" class="w-full bg-dark-800 px-3.5 py-2 rounded-xl border border-white/10 text-white text-[11px] focus:outline-none focus:border-gold-400">
+          </div>
+
+          <div>
+            <label class="block text-gray-300 font-semibold mb-1.5">Short Description</label>
+            <input type="text" id="freeVidDesc" placeholder="e.g. Real client results at Ayesha Salon & Academy Kausa" class="w-full bg-dark-800 px-3.5 py-3 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400">
+          </div>
+
+          <div class="pt-4 flex justify-end gap-3">
+            <button type="button" onclick="switchAdminTab('crm')" class="px-5 py-3 rounded-xl glass-panel text-gray-300 hover:text-white font-medium">Cancel</button>
+            <button type="submit" class="btn-gold px-8 py-3 rounded-xl font-bold text-xs shadow-lg">Add to Free Videos Section</button>
+          </div>
+        </form>
+
+        <!-- EXISTING FREE VIDEOS MANAGEMENT & DELETE LIST -->
+        <div class="mt-10 pt-8 border-t border-white/10 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-serif text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="film" class="w-4 h-4 text-gold-400"></i> Manage & Delete Live Videos / Reels
+            </h4>
+            <span class="text-xs text-gray-400" id="adminFreeVideosCount">0 Videos Active</span>
+          </div>
+
+          <div id="adminFreeVideosList" class="space-y-3">
+            <!-- Injected via JavaScript with 1-click Delete Buttons -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TAB 4: MASTER DEVELOPER CONTROLS (SUPER ADMIN ONLY) -->
+      <div id="adminDevSection" class="hidden glass-panel p-6 sm:p-8 rounded-3xl border border-purple-500/40 max-w-3xl space-y-6">
+        <div>
+          <div class="inline-flex items-center gap-2 text-purple-400 text-xs font-bold uppercase tracking-wider mb-1">
+            <i data-lucide="shield-alert" class="w-4 h-4"></i> Restricted Master Access
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-white">Developer Security & Master Controls</h3>
+          <p class="text-xs text-gray-400">Manage client credentials, platform locks, and master database backups.</p>
+        </div>
+
+        <!-- 1. Change Client Credentials -->
+        <div class="p-5 rounded-2xl bg-dark-800/90 border border-white/10 space-y-3 text-xs">
+          <h4 class="font-bold text-gold-300 flex items-center gap-2">
+            <i data-lucide="key" class="w-4 h-4"></i> Client ID & Password Management
+          </h4>
+          <p class="text-gray-400 text-[11px]">You can view or update the login credentials given to the salon client.</p>
+          
+          <form onsubmit="handleUpdateClientCredentials(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div>
+              <label class="block text-gray-300 font-semibold mb-1">Client Username</label>
+              <input type="text" id="devClientUser" class="w-full bg-dark-700 px-3.5 py-2.5 rounded-xl border border-white/10 text-white font-mono" required>
+            </div>
+            <div>
+              <label class="block text-gray-300 font-semibold mb-1">Client Password</label>
+              <input type="text" id="devClientPass" class="w-full bg-dark-700 px-3.5 py-2.5 rounded-xl border border-white/10 text-white font-mono" required>
+            </div>
+            <div class="sm:col-span-2 flex justify-end">
+              <button type="submit" class="btn-gold px-5 py-2.5 rounded-xl font-bold text-xs">
+                Update Client Password
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- 2. Platform Feature Safeguards -->
+        <div class="p-5 rounded-2xl bg-dark-800/90 border border-white/10 space-y-3 text-xs">
+          <h4 class="font-bold text-purple-300 flex items-center gap-2">
+            <i data-lucide="lock" class="w-4 h-4"></i> Client Action Restrictions (Tamper Protection)
+          </h4>
+          <div class="space-y-2 text-[11px] text-gray-300">
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-dark-900 border border-white/5">
+              <span>Source Code & Styling Files Access</span>
+              <span class="text-red-400 font-bold">🚫 Strict Locked (Developer Only)</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-dark-900 border border-white/5">
+              <span>Core Pricing & Gateway Engine Modifications</span>
+              <span class="text-red-400 font-bold">🚫 Restricted</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-dark-900 border border-white/5">
+              <span>Student Leads & Media Uploads</span>
+              <span class="text-green-400 font-bold">✅ Allowed for Client</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Database Backup & Reset -->
+        <div class="p-5 rounded-2xl bg-dark-800/90 border border-white/10 flex items-center justify-between gap-4 text-xs">
+          <div>
+            <div class="font-bold text-white">Export Full Platform Database</div>
+            <div class="text-[11px] text-gray-400">Download complete backup of courses, leads, and certificates in JSON format.</div>
+          </div>
+          <button onclick="exportMasterDatabaseJSON()" class="px-4 py-2.5 rounded-xl bg-purple-950 text-purple-300 border border-purple-500/30 hover:bg-purple-900/60 font-bold flex items-center gap-1.5 whitespace-nowrap">
+            <i data-lucide="database" class="w-4 h-4"></i> Backup JSON
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONTACT & MUMBRA STUDIO LOCATION -->
+  <section id="contact" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 text-brand-400 text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i> Visit Our Studio
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Ayesha Salon & Academy <br />
+            <span class="gold-gradient-text">Kausa Mumbra, Thane</span>
+          </h2>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Conveniently located in Kausa Mumbra with exclusive private ladies-only salon booths, bridal trial suite, and professional training space.
+          </p>
+
+          <div class="space-y-4 text-xs sm:text-sm text-gray-300">
+            <div class="flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-xl bg-brand-950 border border-brand-500/30 flex items-center justify-center text-brand-400 shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-bold text-white">Studio Address</div>
+                <div class="text-gold-200">Maher Crest, Opposite Sahil Hotel, Next to DCB Bank, Kausa Mumbra, Thane - 400612</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-xl bg-gold-950 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div class="space-y-1.5 flex-1">
+                <div class="font-bold text-white text-sm">Salon & Academy Opening Hours</div>
+                <div class="bg-dark-800/90 rounded-xl p-3 border border-white/5 space-y-1.5 text-xs">
+                  <div class="flex items-center justify-between gap-4">
+                    <span class="text-gray-300 font-medium">Monday – Saturday:</span>
+                    <span class="text-gold-300 font-mono font-bold">11:00 AM – 09:00 PM</span>
+                  </div>
+                  <div class="flex items-center justify-between gap-4 pt-1 border-t border-white/5">
+                    <span class="text-gray-300 font-medium">Sunday:</span>
+                    <span class="text-gold-400 font-mono font-bold">12:00 PM – 08:00 PM</span>
+                  </div>
+                </div>
+                <div class="text-[11px] text-gray-400">Prior appointments & walk-ins both welcome</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-xl bg-green-950 border border-green-500/30 flex items-center justify-center text-green-400 shrink-0">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-bold text-white">Call & WhatsApp Support</div>
+                <div class="text-green-300 font-mono text-base font-bold tracking-wide">+91 76 78 03 04 05</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-wrap gap-4">
+            <a href="https://wa.me/917678030405?text=Hello%20Ayesha%20Salon%20%26%20Academy,%20I%20want%20to%20know%20more%20about%20Salon%20services%20and%20Academy%20batches." target="_blank" class="btn-gold px-6 py-3.5 rounded-xl font-bold text-xs flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> Chat on WhatsApp (76 78 03 04 05)
+            </a>
+            <a href="tel:+917678030405" class="glass-panel px-6 py-3.5 rounded-xl font-semibold text-xs text-white border border-white/10 flex items-center gap-2 hover:bg-dark-700">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-400"></i> Call: +91 76 78 03 04 05
+            </a>
+          </div>
+        </div>
+
+        <!-- Location Map Simulation Card -->
+        <div class="lg:col-span-6">
+          <div class="glass-panel p-3 rounded-3xl border border-gold-500/20 shadow-2xl">
+            <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-dark-800 flex items-center justify-center">
+              <img src="images/enhanced_interior_wide.jpg" class="w-full h-full object-cover brightness-50">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent flex flex-col justify-end p-6">
+                <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center mb-2 shadow-lg animate-bounce">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-white">Ayesha Salon & Academy</h4>
+                <p class="text-xs text-gray-300">Maher Crest, Opp. Sahil Hotel, Next to DCB Bank, Kausa Mumbra</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-dark-900/90 py-12 text-xs text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3.5">
+        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-gold-500/40 bg-black shrink-0 aspect-square p-[1px]">
+          <img src="logo.jpg" alt="Ayesha Salon & Academy Logo" class="w-full h-full rounded-full object-cover aspect-square perfect-circle-logo">
+        </div>
+        <div>
+          <span class="text-white font-serif font-bold text-base block">Ayesha Salon & Academy</span>
+          <span class="text-[11px] text-gray-500">Maher Crest, Opp. Sahil Hotel, Kausa Mumbra | Call: +91 76 78 03 04 05</span>
+        </div>
+      </div>
+
+      <!-- Social Media Icons in Footer -->
+      <div class="flex items-center gap-4 text-gray-300">
+        <a href="https://www.instagram.com/ayesha_salon_mumbra/" target="_blank" class="p-2 rounded-full glass-panel hover:text-pink-400 transition-colors" title="Instagram">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+        </a>
+        <a href="https://www.youtube.com/@ayesha_salon_mumbra" target="_blank" class="p-2 rounded-full glass-panel hover:text-red-400 transition-colors" title="YouTube">
+          <i data-lucide="youtube" class="w-4 h-4"></i>
+        </a>
+        <a href="https://www.facebook.com/ayesha.salon.mumbra" target="_blank" class="p-2 rounded-full glass-panel hover:text-blue-400 transition-colors" title="Facebook">
+          <i data-lucide="facebook" class="w-4 h-4"></i>
+        </a>
+        <a href="https://wa.me/917678030405" target="_blank" class="p-2 rounded-full glass-panel hover:text-green-400 transition-colors" title="WhatsApp">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+        </a>
+        <button onclick="toggleAdminPanel()" class="text-gold-400 hover:underline ml-2">Owner Login</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AUTHENTICATION MODAL -->
+  <div id="authModal" class="fixed inset-0 z-50 bg-dark-900/85 backdrop-blur-xl flex items-center justify-center p-4 hidden">
+    <div class="glass-panel w-full max-w-md p-6 sm:p-8 rounded-3xl border border-gold-500/30 shadow-2xl relative">
+      
+      <button onclick="closeAuthModal()" class="absolute top-4 right-4 p-2 rounded-xl text-gray-400 hover:text-white bg-dark-800">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden border-2 border-gold-500/40 bg-black shrink-0 aspect-square p-[1px]">
+          <img src="logo.jpg" alt="Ayesha Salon & Academy Logo" class="w-full h-full rounded-full object-cover aspect-square perfect-circle-logo">
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-white">Student Registration</h3>
+        <p class="text-xs text-gray-300 mt-1">Ayesha Salon & Academy — Login to unlock masterclasses</p>
+      </div>
+
+      <!-- Quick Google One-Tap Mock -->
+      <button onclick="handleGoogleSignIn()" class="w-full py-3 rounded-xl bg-white text-gray-900 font-bold text-xs flex items-center justify-center gap-3 hover:bg-gray-100 transition-colors shadow-md mb-4">
+        <svg class="w-4 h-4" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+        </svg>
+        <span>Continue with Google Account</span>
+      </button>
+
+      <div class="flex items-center my-4">
+        <div class="flex-1 border-t border-white/10"></div>
+        <span class="px-3 text-[11px] text-gray-400 uppercase">Or with Mobile Number</span>
+        <div class="flex-1 border-t border-white/10"></div>
+      </div>
+
+      <!-- Phone + OTP Form -->
+      <form onsubmit="handleMobileAuth(event)" class="space-y-3.5 text-xs">
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Full Name *</label>
+          <input type="text" id="authStudentName" placeholder="Enter your full name" class="w-full bg-dark-800 px-3.5 py-2.5 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400" required>
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">WhatsApp Mobile Number *</label>
+          <div class="flex gap-2">
+            <span class="bg-dark-700 px-3 py-2.5 rounded-xl border border-white/10 text-gray-300 font-bold flex items-center">+91</span>
+            <input type="tel" id="authStudentPhone" placeholder="76 78 03 04 05" pattern="[0-9]{10}" class="flex-1 bg-dark-800 px-3.5 py-2.5 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400" required>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Gmail Address *</label>
+          <input type="email" id="authStudentEmail" placeholder="name@gmail.com" class="w-full bg-dark-800 px-3.5 py-2.5 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400" required>
+        </div>
+
+        <button type="submit" class="w-full btn-gold py-3 rounded-xl font-bold text-xs shadow-lg mt-2 flex items-center justify-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-dark-900"></i>
+          <span>Verify & Register Student</span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- MODAL: EDIT / RENAME FREE VIDEO -->
+  <div id="editFreeVideoModal" class="fixed inset-0 z-50 bg-dark-900/90 backdrop-blur-xl flex items-center justify-center p-4 hidden">
+    <div class="glass-panel w-full max-w-lg p-6 sm:p-8 rounded-3xl border border-gold-500/40 shadow-2xl relative">
+      
+      <button onclick="closeEditFreeVideoModal()" class="absolute top-4 right-4 p-2 rounded-xl text-gray-400 hover:text-white bg-dark-800">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-white/10">
+        <div class="w-10 h-10 rounded-xl bg-gold-400 text-dark-900 flex items-center justify-center font-bold">
+          <i data-lucide="edit-3" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="font-serif text-xl font-bold text-white">Rename / Edit Video Details</h3>
+          <p class="text-[11px] text-gold-300">Update video title, Instagram reel link, or description</p>
+        </div>
+      </div>
+
+      <form onsubmit="handleSaveEditedFreeVideo(event)" class="space-y-4 text-xs">
+        <input type="hidden" id="editFreeVidId">
+
+        <div>
+          <label class="block text-gray-300 font-bold mb-1.5">Video / Reel Title (Rename Here) *</label>
+          <input type="text" id="editFreeVidTitle" placeholder="Enter new title" class="w-full bg-dark-800 px-3.5 py-3 rounded-xl border border-gold-500/40 text-white font-semibold text-sm focus:outline-none focus:border-gold-400" required>
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1.5">Video / Reel URL *</label>
+          <input type="text" id="editFreeVidUrl" placeholder="https://www.instagram.com/reel/... or YouTube link" class="w-full bg-dark-800 px-3.5 py-2.5 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400" required>
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1.5">Change Thumbnail (Upload from Laptop or Pick Studio Photo)</label>
+          
+          <!-- DIRECT LOCAL FILE UPLOAD BUTTON FOR EDIT -->
+          <div class="mb-3 space-y-2">
+            <input type="file" id="editFreeVidFileInput" accept="image/*" class="hidden" onchange="handleLocalImageUpload(event, 'edit')">
+            <label for="editFreeVidFileInput" class="w-full py-3 px-4 rounded-xl border-2 border-dashed border-gold-500/50 hover:border-gold-400 bg-gold-950/30 hover:bg-gold-950/60 text-gold-300 font-bold text-xs flex items-center justify-center gap-2 cursor-pointer transition-all shadow-sm">
+              <i data-lucide="folder-up" class="w-4 h-4 text-gold-400"></i>
+              <span id="editFreeVidFileName">📁 Upload New Photo from Laptop / Phone Storage</span>
+            </label>
+            <div id="editFreeVidPreviewContainer" class="hidden flex items-center gap-3 p-2 rounded-xl bg-dark-700 border border-gold-500/30">
+              <img id="editFreeVidPreviewImg" class="w-16 h-12 object-cover rounded-lg">
+              <div class="text-[11px] text-green-400 font-bold flex items-center gap-1">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Device Image Loaded
+              </div>
+            </div>
+          </div>
+
+          <div class="text-[10px] text-gray-400 mb-1 font-semibold uppercase tracking-wider">Or Select Studio Interior Photo:</div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-2">
+            <button type="button" onclick="selectEditFreeVidPoster('images/enhanced_interior_wide.jpg', this)" class="p-1.5 rounded-xl border border-white/10 bg-dark-700 text-left hover:border-gold-400 focus:ring-1 focus:ring-gold-400 group">
+              <img src="images/enhanced_interior_wide.jpg" class="w-full h-12 object-cover rounded-lg mb-1">
+              <div class="text-[10px] text-white font-semibold truncate">Studio Arena</div>
+            </button>
+            <button type="button" onclick="selectEditFreeVidPoster('images/enhanced_interior_pedicure.jpg', this)" class="p-1.5 rounded-xl border border-white/10 bg-dark-700 text-left hover:border-gold-400 focus:ring-1 focus:ring-gold-400 group">
+              <img src="images/enhanced_interior_pedicure.jpg" class="w-full h-12 object-cover rounded-lg mb-1">
+              <div class="text-[10px] text-white font-semibold truncate">Pedicure Spa</div>
+            </button>
+            <button type="button" onclick="selectEditFreeVidPoster('images/enhanced_interior_chair.jpg', this)" class="p-1.5 rounded-xl border border-white/10 bg-dark-700 text-left hover:border-gold-400 focus:ring-1 focus:ring-gold-400 group">
+              <img src="images/enhanced_interior_chair.jpg" class="w-full h-12 object-cover rounded-lg mb-1">
+              <div class="text-[10px] text-white font-semibold truncate">Bridal Chair</div>
+            </button>
+            <button type="button" onclick="selectEditFreeVidPoster('images/enhanced_interior_lounge.jpg', this)" class="p-1.5 rounded-xl border border-white/10 bg-dark-700 text-left hover:border-gold-400 focus:ring-1 focus:ring-gold-400 group">
+              <img src="images/enhanced_interior_lounge.jpg" class="w-full h-12 object-cover rounded-lg mb-1">
+              <div class="text-[10px] text-white font-semibold truncate">Velvet Lounge</div>
+            </button>
+          </div>
+          <input type="text" id="editFreeVidPoster" placeholder="Custom image URL or device file" class="w-full bg-dark-800 px-3.5 py-2 rounded-xl border border-white/10 text-white text-[11px] focus:outline-none focus:border-gold-400">
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1.5">Short Description</label>
+          <textarea id="editFreeVidDesc" rows="2" placeholder="Brief description of the video..." class="w-full bg-dark-800 px-3.5 py-2.5 rounded-xl border border-white/10 text-white focus:outline-none focus:border-gold-400"></textarea>
+        </div>
+
+        <div class="pt-2 flex justify-end gap-3">
+          <button type="button" onclick="closeEditFreeVideoModal()" class="px-5 py-3 rounded-xl glass-panel text-gray-300 hover:text-white font-medium">Cancel</button>
+          <button type="submit" class="btn-gold px-7 py-3 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-dark-900"></i>
+            <span>Save & Update Video</span>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- PAYMENT CHECKOUT MODAL (RAZORPAY / UPI / GPAY / PHONEPE) -->
+  <div id="paymentModal" class="fixed inset-0 z-50 bg-dark-900/85 backdrop-blur-xl flex items-center justify-center p-4 hidden">
+    <div class="glass-panel w-full max-w-md p-6 sm:p-8 rounded-3xl border border-gold-500/40 shadow-2xl relative">
+      
+      <button onclick="closePaymentModal()" class="absolute top-4 right-4 p-2 rounded-xl text-gray-400 hover:text-white bg-dark-800">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+        <div class="w-12 h-12 rounded-2xl bg-gold-400 text-dark-900 flex items-center justify-center font-bold">
+          <i data-lucide="credit-card" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="text-[11px] text-gold-400 font-bold uppercase tracking-wider">Fast UPI & Razorpay Checkout</div>
+          <h3 class="font-serif text-lg font-bold text-white" id="checkoutCourseTitle">Masterclass Enrollment</h3>
+        </div>
+      </div>
+
+      <!-- Price Breakdown -->
+      <div class="bg-dark-800/80 p-4 rounded-2xl border border-white/5 space-y-2 mb-6 text-xs">
+        <div class="flex justify-between text-gray-300">
+          <span>Selected Course / Pass</span>
+          <span class="font-bold text-white" id="checkoutCourseName">HD Bridal Masterclass</span>
+        </div>
+        <div class="flex justify-between text-gray-300">
+          <span>Certificate & Notes</span>
+          <span class="text-green-400 font-semibold">FREE Included</span>
+        </div>
+        <div class="flex justify-between text-base font-bold text-gold-400 pt-2 border-t border-white/10">
+          <span>Total Payable</span>
+          <span id="checkoutAmountText">₹499</span>
+        </div>
+      </div>
+
+      <!-- UPI & Payment Method Selection -->
+      <div class="space-y-3 mb-6">
+        <div class="text-xs font-semibold text-gray-300">Select Instant Payment Mode:</div>
+        
+        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+          <label class="cursor-pointer p-2.5 rounded-xl border border-gold-500/40 bg-gold-500/10 flex flex-col items-center gap-1 font-bold text-white">
+            <input type="radio" name="paymethod" checked class="hidden">
+            <span class="text-gold-400 font-serif">GPay / UPI</span>
+            <span class="text-[10px] text-gray-300">Instant</span>
+          </label>
+          <label class="cursor-pointer p-2.5 rounded-xl border border-white/10 bg-dark-800 flex flex-col items-center gap-1 font-semibold text-gray-300 hover:border-gold-500/40">
+            <input type="radio" name="paymethod" class="hidden">
+            <span>PhonePe</span>
+            <span class="text-[10px] text-gray-400">QR / App</span>
+          </label>
+          <label class="cursor-pointer p-2.5 rounded-xl border border-white/10 bg-dark-800 flex flex-col items-center gap-1 font-semibold text-gray-300 hover:border-gold-500/40">
+            <input type="radio" name="paymethod" class="hidden">
+            <span>Paytm / Cards</span>
+            <span class="text-[10px] text-gray-400">NetBanking</span>
+          </label>
+        </div>
+      </div>
+
+      <button onclick="processCoursePayment()" id="payBtn" class="w-full btn-gold py-3.5 rounded-xl font-bold text-sm shadow-xl flex items-center justify-center gap-2">
+        <i data-lucide="check-circle" class="w-5 h-5 text-dark-900"></i>
+        <span id="payBtnText">Pay Now & Unlock Instantly</span>
+      </button>
+
+      <p class="text-[11px] text-center text-gray-400 mt-3 flex items-center justify-center gap-1.5">
+        <i data-lucide="lock" class="w-3.5 h-3.5 text-green-400"></i> 256-Bit SSL Encrypted & Secure
+      </p>
+
+    </div>
+  </div>
+
+  <!-- MODAL: ADD WALK-IN STUDENT MANUALLY -->
+  <div id="addStudentModal" class="fixed inset-0 z-50 bg-dark-900/85 backdrop-blur-xl flex items-center justify-center p-4 hidden">
+    <div class="glass-panel w-full max-w-md p-6 rounded-3xl border border-white/10 shadow-2xl relative">
+      <button onclick="closeAddStudentModal()" class="absolute top-4 right-4 p-2 rounded-xl text-gray-400 hover:text-white bg-dark-800">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <h3 class="font-serif text-xl font-bold text-white mb-4">Add Walk-in Student Record</h3>
+      
+      <form onsubmit="handleManualStudentAdd(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Student Name</label>
+          <input type="text" id="manualName" placeholder="e.g. Saira Bano" class="w-full bg-dark-800 px-3 py-2.5 rounded-xl border border-white/10 text-white" required>
+        </div>
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">WhatsApp Number</label>
+          <input type="tel" id="manualPhone" placeholder="76 78 03 04 05" class="w-full bg-dark-800 px-3 py-2.5 rounded-xl border border-white/10 text-white" required>
+        </div>
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Email Address</label>
+          <input type="email" id="manualEmail" placeholder="saira@gmail.com" class="w-full bg-dark-800 px-3 py-2.5 rounded-xl border border-white/10 text-white" required>
+        </div>
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Enrolled Masterclass</label>
+          <select id="manualCourseSelect" class="w-full bg-dark-800 px-3 py-2.5 rounded-xl border border-white/10 text-white">
+            <!-- Populated via JS -->
+          </select>
+        </div>
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Payment Amount Paid (₹)</label>
+          <input type="number" id="manualAmount" value="499" class="w-full bg-dark-800 px-3 py-2.5 rounded-xl border border-white/10 text-white" required>
+        </div>
+        <button type="submit" class="w-full btn-gold py-3 rounded-xl font-bold mt-3">Save Student Record</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ONE-TIME CERTIFICATE NAME ENTRY & LOCK PROMPT -->
+  <div id="certNamePromptModal" class="fixed inset-0 z-50 bg-dark-900/90 backdrop-blur-xl flex items-center justify-center p-4 hidden">
+    <div class="glass-panel w-full max-w-lg p-6 sm:p-8 rounded-3xl border border-gold-500/40 shadow-2xl relative">
+      
+      <button onclick="closeCertNamePromptModal()" class="absolute top-4 right-4 p-2 rounded-xl text-gray-400 hover:text-white bg-dark-800">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-white/10">
+        <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-gold-400 bg-black shrink-0 aspect-square p-[1px]">
+          <img src="logo.jpg" alt="Ayesha Salon & Academy Logo" class="w-full h-full rounded-full object-cover aspect-square perfect-circle-logo">
+        </div>
+        <div>
+          <h3 class="font-serif text-xl font-bold text-white">Certificate Name Registration</h3>
+          <p class="text-[11px] text-gold-300">Ayesha Salon & Academy Official Masterclass Certification</p>
+        </div>
+      </div>
+
+      <form onsubmit="handleLockCertificateName(event)" class="space-y-4 text-xs">
+        
+        <!-- WARNING ALERT BOX -->
+        <div class="p-4 rounded-2xl bg-red-950/80 border border-red-500/50 text-red-200 space-y-2">
+          <div class="font-bold flex items-center gap-2 text-red-400 text-sm">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-red-400"></i> ⚠️ ONE-TIME NAME ENTRY (CANNOT BE CHANGED)
+          </div>
+          <p class="text-[11px] leading-relaxed text-gray-200">
+            Kripya apna <b>Full Official Name aur spelling dhyan se check karke likhein</b>. Ek baar submit karne ke baad ye name <b>Permanently Lock</b> ho jayega aur dobara edit nahi hoga taaki koi alag-alag name se fake certificates na bana sake.
+          </p>
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-bold mb-1.5">Enter Your Full Name for Certificate *</label>
+          <input type="text" id="certInputStudentName" placeholder="e.g. Zainab Fatima Shaikh" class="w-full bg-dark-800 px-4 py-3 rounded-xl border border-gold-500/40 text-white font-semibold text-sm focus:outline-none focus:border-gold-400" required>
+        </div>
+
+        <div class="pt-1">
+          <label class="flex items-start gap-2.5 text-xs text-gray-300 cursor-pointer select-none">
+            <input type="checkbox" id="certConfirmCheckbox" required class="mt-0.5 rounded border-white/20 text-gold-500 focus:ring-0">
+            <span class="text-[11px] text-gray-300 leading-snug">
+              Maine apna name aur spelling dhyan se check kar li hai. Main ise <b>Permanently Lock</b> karne ke liye confirm karti hoon.
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" class="w-full btn-gold py-3.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-xl mt-2">
+          <i data-lucide="lock" class="w-4 h-4 text-dark-900"></i>
+          <span>Lock Name & Generate Official Certificate</span>
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- LUXURY CERTIFICATE MODAL -->
+  <div id="certificateModal" class="fixed inset-0 z-50 bg-dark-900/90 backdrop-blur-xl flex items-center justify-center p-4 hidden">
+    <div class="glass-panel w-full max-w-2xl p-6 sm:p-8 rounded-3xl border border-gold-500/40 shadow-2xl relative">
+      
+      <button onclick="closeCertificateModal()" class="absolute top-4 right-4 p-2 rounded-xl text-gray-400 hover:text-white bg-dark-800">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- PRINTABLE CERTIFICATE CONTAINER -->
+      <div id="printableCertificate" class="p-6 sm:p-10 rounded-2xl bg-gradient-to-b from-[#1c1216] via-[#120a0d] to-[#1c1216] border-4 border-double border-gold-500/60 text-center relative overflow-hidden shadow-2xl">
+        
+        <!-- Ambient Watermark in Certificate Background -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+          <img src="logo.jpg" class="w-80 h-80 object-contain">
+        </div>
+
+        <!-- Corner Ornaments -->
+        <div class="absolute top-2 left-2 text-gold-400 text-xs">✦</div>
+        <div class="absolute top-2 right-2 text-gold-400 text-xs">✦</div>
+        <div class="absolute bottom-2 left-2 text-gold-400 text-xs">✦</div>
+        <div class="absolute bottom-2 right-2 text-gold-400 text-xs">✦</div>
+
+        <!-- Academy Header & Logo -->
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-gold-400 bg-black shrink-0 aspect-square p-[1px]">
+            <img src="logo.jpg" alt="Ayesha Salon & Academy Logo" class="w-full h-full rounded-full object-cover aspect-square perfect-circle-logo">
+          </div>
+          <div>
+            <h4 class="font-serif text-lg sm:text-xl font-bold tracking-wider text-white">AYESHA SALON & ACADEMY</h4>
+            <p class="text-[10px] text-gold-300 tracking-[0.2em] uppercase font-semibold">Center for Professional Beauty & Bridal Artistry • Kausa Mumbra</p>
+          </div>
+        </div>
+
+        <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mb-4"></div>
+
+        <div class="text-[11px] uppercase tracking-[0.25em] text-gold-400 font-bold mb-1">
+          Certificate of Excellence & Completion
+        </div>
+        <p class="text-xs text-gray-400 italic mb-4">This is proudly awarded to</p>
+
+        <!-- Student Name -->
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold gold-gradient-text border-b border-gold-500/30 pb-2 inline-block px-8 mb-4" id="certStudentName">
+          Student Name
+        </h2>
+
+        <p class="text-xs text-gray-300 max-w-md mx-auto leading-relaxed mb-6">
+          For successfully completing the comprehensive professional masterclass training in <br />
+          <strong class="text-white font-serif text-sm" id="certCourseTitle">Royal HD Bridal & Airbrush Masterclass</strong> <br />
+          with hands-on theoretical and practical proficiency.
+        </p>
+
+        <!-- Signatures & Verification Badge -->
+        <div class="grid grid-cols-3 items-end pt-4 border-t border-white/10 text-xs">
+          
+          <div class="text-left">
+            <div class="text-[10px] text-gray-400">Issue Date:</div>
+            <div class="text-white font-mono font-bold text-[11px]" id="certIssueDate">2026-08-23</div>
+            <div class="text-[9px] text-gold-400 font-mono mt-0.5" id="certVerificationCode">ID: CERT-AS-8941</div>
+          </div>
+
+          <!-- Gold Ribbon Seal Badge -->
+          <div class="flex flex-col items-center">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-gold-600 via-gold-300 to-gold-700 text-dark-900 flex items-center justify-center font-bold shadow-lg border border-gold-200">
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <span class="text-[9px] text-gold-300 font-bold uppercase tracking-wider mt-1">Certified</span>
+          </div>
+
+          <div class="text-right">
+            <div class="font-serif font-bold text-sm text-gold-300 italic">Ayesha Ma'am</div>
+            <div class="text-[10px] text-gray-400 border-t border-gold-500/30 pt-0.5">Master Educator & Founder</div>
+            <div class="text-[9px] text-gray-500">Ayesha Salon & Academy</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="pt-6 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <span class="text-gray-400 text-[11px] flex items-center gap-1">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-green-400"></i> Digitally Verified & Authorized
+        </span>
+        
+        <div class="flex gap-2">
+          <button onclick="shareCertificateOnWhatsApp()" class="px-4 py-2.5 rounded-xl bg-green-950 text-green-300 border border-green-500/30 hover:bg-green-900/50 font-bold flex items-center gap-1.5">
+            <i data-lucide="share-2" class="w-4 h-4 text-green-400"></i> Share Certificate
+          </button>
+          <button onclick="window.print()" class="btn-gold px-5 py-2.5 rounded-xl font-bold flex items-center gap-1.5 shadow-lg">
+            <i data-lucide="download" class="w-4 h-4 text-dark-900"></i> Download / Print
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/917678030405?text=Hi%20Ayesha%20Salon%20%26%20Academy,%20I%20have%20a%20query%20about%20Salon%20services%20and%20Academy%20classes." target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white/20" title="Chat on WhatsApp (+91 76 78 03 04 05)">
+    <i data-lucide="message-circle" class="w-7 h-7 fill-current"></i>
+  </a>
+
+  <!-- ==================== JAVASCRIPT APPLICATION CORE ==================== -->
+  <script>
+    // INITIAL STATE / LOCAL STORAGE DATABASE
+    const DEFAULT_FREE_VIDEOS = [
+      {
+        id: 1,
+        title: "Bridal HD Makeup Transformation Demo",
+        url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        poster: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
+        desc: "Real bride makeover highlights at Ayesha Salon & Academy Kausa."
+      },
+      {
+        id: 2,
+        title: "Hair Botox & Keratin Shine Result",
+        url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        poster: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
+        desc: "Step-by-step frizz control treatment result video."
+      },
+      {
+        id: 3,
+        title: "Hydra Facial Machine Demo & Glow",
+        url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        poster: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop",
+        desc: "Deep pore vacuum extraction and instant skin glow."
+      }
+    ];
+
+    const DEFAULT_COURSES = [
+      {
+        id: 1,
+        title: "Royal HD Bridal & Airbrush Masterclass",
+        type: "recorded",
+        price: 499,
+        originalPrice: 1999,
+        duration: "2h 30m HD",
+        badge: "Bestseller",
+        image: "images/enhanced_interior_wide.jpg",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        desc: "Complete step-by-step HD bridal base, sweat-proof technique, color matching for Indian brides, and cut-crease eye makeup."
+      },
+      {
+        id: 2,
+        title: "Advanced Bridal Hairstyling & Dupatta Draping",
+        type: "recorded",
+        price: 399,
+        originalPrice: 1499,
+        duration: "1h 50m HD",
+        badge: "High Demand",
+        image: "images/enhanced_interior_chair.jpg",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        desc: "Learn 5 trending bridal hairstyles (Russian bun, textured braids, Hollywood waves) with veil & heavy dupatta setting."
+      },
+      {
+        id: 3,
+        title: "Live Masterclass: 3D Russian Nail Art & Acrylic",
+        type: "live",
+        price: 599,
+        originalPrice: 2499,
+        duration: "Sunday 4:00 PM",
+        badge: "Live Interactive",
+        image: "images/enhanced_interior_pedicure.jpg",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        desc: "Live interactive session with live Q&A. Master acrylic application, 3D acrylic flowers, and chrome ombre techniques."
+      },
+      {
+        id: 4,
+        title: "Hydra Facial & Clinical Skin Science Masterclass",
+        type: "recorded",
+        price: 699,
+        originalPrice: 2999,
+        duration: "3h 10m HD",
+        badge: "Certificate Included",
+        image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        desc: "Master skin types, acne treatment, chemical peels, and step-by-step operating of modern 7-in-1 Hydra Facial machines."
+      },
+      {
+        id: 5,
+        title: "Arabic & Dubai Figure Bridal Mehendi Masterclass",
+        type: "recorded",
+        price: 299,
+        originalPrice: 999,
+        duration: "1h 40m HD",
+        badge: "Trending",
+        image: "https://images.unsplash.com/photo-1599818816912-140f7b03887c?q=80&w=800&auto=format&fit=crop",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+        desc: "Learn dark stain organic henna cones preparation, intricate Arabic bel, and bride-groom figure motifs."
+      }
+    ];
+
+    const DEFAULT_STUDENT_LEADS = [
+      {
+        id: "AS-101",
+        name: "Zainab Shaikh",
+        phone: "76 78 03 04 05",
+        email: "zainab.kausa@gmail.com",
+        course: "Royal HD Bridal & Airbrush Masterclass",
+        amountPaid: 499,
+        status: "Paid & Active",
+        date: "2026-08-20"
+      },
+      {
+        id: "AS-102",
+        name: "Aafiya Khan",
+        phone: "91 67 89 01 23",
+        email: "aafiya.beauty@gmail.com",
+        course: "VIP All-Access Pass (Monthly)",
+        amountPaid: 1499,
+        status: "VIP Enrolled",
+        date: "2026-08-21"
+      },
+      {
+        id: "AS-103",
+        name: "Fatima Ansari",
+        phone: "98 33 44 55 66",
+        email: "fatima.ansari99@gmail.com",
+        course: "Advanced Bridal Hairstyling",
+        amountPaid: 399,
+        status: "Paid & Active",
+        date: "2026-08-22"
+      }
+    ];
+
+    // LocalStorage Initialization
+    let appCourses = JSON.parse(localStorage.getItem('ayesha_courses')) || DEFAULT_COURSES;
+    let freeVideos = JSON.parse(localStorage.getItem('ayesha_free_videos')) || DEFAULT_FREE_VIDEOS;
+    let studentLeads = JSON.parse(localStorage.getItem('ayesha_student_leads')) || DEFAULT_STUDENT_LEADS;
+    let currentUser = JSON.parse(localStorage.getItem('ayesha_current_user')) || null;
+    let activePurchasingItem = null;
+    let currentActiveCourse = appCourses[0];
+
+    // Save Data Helpers
+    function saveCourses() { localStorage.setItem('ayesha_courses', JSON.stringify(appCourses)); }
+    function saveFreeVideos() { localStorage.setItem('ayesha_free_videos', JSON.stringify(freeVideos)); }
+    function saveStudentLeads() { localStorage.setItem('ayesha_student_leads', JSON.stringify(studentLeads)); }
+    function saveCurrentUser() { localStorage.setItem('ayesha_current_user', JSON.stringify(currentUser)); }
+
+    // SMART VIDEO EMBED HELPER (Supports YouTube, Vimeo, MP4, Shorts, with Error 153 bypass)
+    function formatVideoEmbed(url, poster) {
+      if (!url) return '';
+      const cleanUrl = url.trim();
+
+      // Check YouTube
+      if (cleanUrl.includes('youtube.com') || cleanUrl.includes('youtu.be')) {
+        let videoId = '';
+        if (cleanUrl.includes('youtu.be/')) {
+          videoId = cleanUrl.split('youtu.be/')[1].split(/[?&#]/)[0];
+        } else if (cleanUrl.includes('shorts/')) {
+          videoId = cleanUrl.split('shorts/')[1].split(/[?&#]/)[0];
+        } else if (cleanUrl.includes('v=')) {
+          videoId = cleanUrl.split('v=')[1].split(/[&#]/)[0];
+        } else if (cleanUrl.includes('embed/')) {
+          videoId = cleanUrl.split('embed/')[1].split(/[?&#]/)[0];
+        }
+        
+        if (videoId) {
+          // ALWAYS prioritize the real YouTube video thumbnail
+          const thumb = (poster && !poster.includes('enhanced_interior')) 
+            ? poster 
+            : `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+            
+          return `
+            <div id="yt-container-${videoId}" class="relative w-full h-full bg-black group/yt overflow-hidden">
+              <img src="${thumb}" alt="YouTube Video Thumbnail" class="w-full h-full object-cover group-hover/yt:scale-105 transition-transform duration-500">
+              
+              <!-- Dark Overlay with Play Button -->
+              <div onclick="launchYouTubeEmbed('${videoId}', this)" class="absolute inset-0 bg-dark-900/40 hover:bg-dark-900/20 transition-all flex items-center justify-center cursor-pointer">
+                <div class="w-14 h-14 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-2xl group-hover/yt:scale-110 group-hover/yt:bg-red-600 transition-transform">
+                  <i data-lucide="play" class="w-7 h-7 fill-current ml-0.5"></i>
+                </div>
+              </div>
+
+              <!-- Direct YouTube Link Tag -->
+              <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" class="absolute bottom-2 right-2 bg-dark-900/90 hover:bg-black text-white text-[10px] font-bold px-2 py-1 rounded-md border border-white/10 flex items-center gap-1">
+                <i data-lucide="external-link" class="w-3 h-3 text-red-400"></i> YouTube
+              </a>
+            </div>
+          `;
+        }
+      }
+
+      // Check Instagram Reel or Post
+      if (cleanUrl.includes('instagram.com')) {
+        const igThumb = (poster && poster.trim() !== '') ? poster : 'images/enhanced_interior_wide.jpg';
+        return `
+          <div class="relative w-full h-full bg-gradient-to-tr from-purple-950 via-pink-950 to-dark-900 group/ig overflow-hidden flex flex-col justify-between p-4">
+            <img src="${igThumb}" alt="Instagram Reel Poster" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover/ig:scale-105 group-hover/ig:opacity-65 transition-all duration-500">
+            
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-lg">
+                <i data-lucide="instagram" class="w-3.5 h-3.5"></i> Instagram Reel
+              </span>
+              <span class="text-[10px] text-pink-200 font-semibold bg-black/60 px-2 py-0.5 rounded-full border border-pink-500/30">@ayesha_salon_mumbra</span>
+            </div>
+
+            <div class="relative z-10 text-center my-auto">
+              <a href="${cleanUrl}" target="_blank" class="w-14 h-14 mx-auto rounded-full bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white flex items-center justify-center shadow-2xl group-hover/ig:scale-110 transition-transform">
+                <i data-lucide="play" class="w-7 h-7 fill-current ml-0.5"></i>
+              </a>
+              <div class="text-[11px] font-bold text-white mt-2 drop-shadow">Tap to Watch on Instagram</div>
+            </div>
+
+            <div class="relative z-10 flex justify-end">
+              <a href="${cleanUrl}" target="_blank" class="bg-pink-600 hover:bg-pink-500 text-white text-[10px] font-bold px-3 py-1.5 rounded-xl border border-white/20 flex items-center gap-1 shadow-lg">
+                <i data-lucide="external-link" class="w-3 h-3"></i> Open in Instagram
+              </a>
+            </div>
+          </div>
+        `;
+      }
+
+      // Check Vimeo
+      if (cleanUrl.includes('vimeo.com/')) {
+        const vimeoId = cleanUrl.split('vimeo.com/')[1].split(/[?&#]/)[0];
+        return `<iframe class="w-full h-full" src="https://player.vimeo.com/video/${vimeoId}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+      }
+
+      // Standard HTML5 Video (MP4 / WebM / Direct Stream)
+      return `
+        <video class="w-full h-full object-cover" controls playsinline controlslist="nodownload" poster="${poster || 'images/enhanced_interior_chair.jpg'}">
+          <source src="${cleanUrl}" type="video/mp4">
+          Your browser does not support video.
+        </video>
+      `;
+    }
+
+    function launchYouTubeEmbed(videoId, element) {
+      const container = element.parentElement;
+      container.innerHTML = `
+        <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      `;
+    }
+
+    // RENDER FREE VIDEOS SHOWCASE
+    function renderFreeVideos() {
+      const grid = document.getElementById('freeVideosGrid');
+      if (!grid) return;
+
+      grid.innerHTML = freeVideos.map(vid => `
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group flex flex-col justify-between">
+          <div class="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
+            ${formatVideoEmbed(vid.url, vid.poster)}
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-gold-400 uppercase tracking-wider">Free Watch</span>
+              <h4 class="font-serif text-base font-bold text-white mt-1">${vid.title}</h4>
+              <p class="text-xs text-gray-400 mt-1">${vid.desc}</p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    // RENDER COURSES FUNCTION
+    function renderCourses(filter = 'all') {
+      const grid = document.getElementById('courseCardsGrid');
+      if (!grid) return;
+
+      const filtered = appCourses.filter(c => {
+        if (filter === 'live') return c.type === 'live';
+        if (filter === 'recorded') return c.type === 'recorded';
+        return true;
+      });
+
+      grid.innerHTML = filtered.map(course => {
+        const access = getCourseAccessDetails(course.id);
+        const isEnrolled = access.unlocked;
+
+        return `
+          <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-gold-500/40 transition-all duration-300 flex flex-col group">
+            
+            <!-- Thumbnail Image -->
+            <div class="relative aspect-[16/10] overflow-hidden bg-dark-800">
+              <img src="${course.image}" alt="${course.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              
+              <div class="absolute top-3 left-3 flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded-full text-[10px] font-bold ${course.type === 'live' ? 'bg-red-600 text-white animate-pulse' : 'bg-brand-800 text-white'}">
+                  ${course.type === 'live' ? '● LIVE CLASS' : 'RECORDED HD'}
+                </span>
+                <span class="glass-panel px-2.5 py-1 rounded-full text-[10px] font-bold text-gold-300 border border-gold-500/30">
+                  ${course.badge || 'Certificate'}
+                </span>
+              </div>
+
+              <!-- Expiry / Access Badge -->
+              <div class="absolute top-3 right-3">
+                ${isEnrolled ? `
+                  <span class="px-2.5 py-1 rounded-full text-[10px] font-bold ${access.isVIP ? 'bg-purple-900 text-purple-200 border border-purple-400/40' : 'bg-green-950 text-green-300 border border-green-500/40'}">
+                    ${access.label}
+                  </span>
+                ` : access.isExpired ? `
+                  <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-950 text-red-300 border border-red-500/40">
+                    ⚠️ 30-Day Expired
+                  </span>
+                ` : `
+                  <span class="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-dark-900/85 text-gold-300 border border-gold-500/20">
+                    30 Days Pass
+                  </span>
+                `}
+              </div>
+
+              <button onclick="previewCourseModal(${course.id})" class="absolute inset-0 bg-dark-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-xs font-bold text-white">
+                <div class="w-12 h-12 rounded-full bg-gold-400 text-dark-900 flex items-center justify-center shadow-xl">
+                  <i data-lucide="play" class="w-6 h-6 fill-current ml-0.5"></i>
+                </div>
+              </button>
+            </div>
+
+            <!-- Card Content -->
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-gray-400 mb-2">
+                  <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-brand-400"></i> ${course.duration}</span>
+                  <span class="flex items-center gap-1 text-gold-400"><i data-lucide="award" class="w-3.5 h-3.5"></i> Verified Certificate</span>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-white group-hover:text-gold-300 transition-colors">${course.title}</h3>
+                <p class="text-xs text-gray-400 mt-2 line-clamp-2 leading-relaxed">${course.desc}</p>
+              </div>
+
+              <!-- Price & CTA -->
+              <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-gray-400 line-through">₹${course.originalPrice || course.price * 3}</span>
+                  <div class="text-xl font-bold text-gold-400">₹${course.price} <span class="text-[10px] font-normal text-gray-400">/ 30 Days</span></div>
+                </div>
+
+                ${isEnrolled ? `
+                  <button onclick="playCourseInArena(${course.id})" class="btn-rose px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-1.5">
+                    <i data-lucide="play-circle" class="w-4 h-4"></i> Watch Now
+                  </button>
+                ` : `
+                  <button onclick="openPaymentModal({id: ${course.id}, title: '${course.title}', price: ${course.price}, type: 'single'})" class="btn-gold px-5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-md">
+                    <i data-lucide="lock" class="w-3.5 h-3.5 text-dark-900"></i> ${access.isExpired ? 'Renew Pass' : 'Enroll Now'}
+                  </button>
+                `}
+              </div>
+            </div>
+
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    // FILTER COURSES TAB
+    function filterCourses(type) {
+      document.querySelectorAll('[id^="filter-"]').forEach(btn => {
+        btn.classList.remove('bg-brand-600', 'text-white', 'shadow-md');
+        btn.classList.add('text-gray-400');
+      });
+      const activeBtn = document.getElementById(`filter-${type}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-gray-400');
+        activeBtn.classList.add('bg-brand-600', 'text-white', 'shadow-md');
+      }
+      renderCourses(type);
+    }
+
+    // ==================== 30-DAY EXPIRY & LIFETIME ACCESS LOGIC ====================
+    function getCourseAccessDetails(courseId) {
+      if (!currentUser) return { unlocked: false, status: 'locked', label: 'Enroll Now' };
+
+      // Case 1: Lifetime VIP All-Access Pass
+      if (currentUser.isVIP) {
+        return { unlocked: true, isVIP: true, status: 'lifetime', label: '👑 Lifetime VIP Pass Active' };
+      }
+
+      // Case 2: Individual 30-Day Course Access
+      if (currentUser.courseAccess && currentUser.courseAccess[courseId]) {
+        const access = currentUser.courseAccess[courseId];
+        if (access.isLifetime) {
+          return { unlocked: true, isVIP: false, status: 'lifetime', label: '👑 Lifetime Access Active' };
+        }
+
+        const now = new Date();
+        const expiry = new Date(access.expiryDate);
+        const diffTime = expiry - now;
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        if (diffDays > 0) {
+          return { unlocked: true, daysLeft: diffDays, status: 'active', label: `⏳ ${diffDays} Days Left (30-Day Access)` };
+        } else {
+          return { unlocked: false, isExpired: true, status: 'expired', label: '⚠️ 30-Day Access Expired' };
+        }
+      }
+
+      // Legacy fallback
+      if (currentUser.unlockedCourses && currentUser.unlockedCourses.includes(courseId)) {
+        return { unlocked: true, daysLeft: 30, status: 'active', label: '⏳ 30 Days Access Active' };
+      }
+
+      return { unlocked: false, status: 'locked', label: 'Enroll Now' };
+    }
+
+    // CHECK IF COURSE IS UNLOCKED FOR CURRENT USER
+    function isCourseUnlocked(courseId) {
+      const access = getCourseAccessDetails(courseId);
+      return access.unlocked;
+    }
+
+    // PLAY COURSE IN SECURE VIDEO ARENA
+    function playCourseInArena(courseId) {
+      const course = appCourses.find(c => c.id === courseId) || appCourses[0];
+      currentActiveCourse = course;
+      
+      const videoPlayer = document.getElementById('mainVideoPlayer');
+      const lockOverlay = document.getElementById('videoLockOverlay');
+      const titleEl = document.getElementById('currentPlayingTitle');
+      const badgeEl = document.getElementById('currentPlayingBadge');
+      const durEl = document.getElementById('currentPlayingDuration');
+
+      titleEl.innerText = course.title;
+      badgeEl.innerText = course.type === 'live' ? 'Live Streaming' : 'Recorded Masterclass';
+      durEl.innerText = 'Duration: ' + course.duration;
+
+      if (isCourseUnlocked(course.id)) {
+        lockOverlay.classList.add('hidden');
+        videoPlayer.src = course.videoUrl;
+        videoPlayer.play().catch(() => {});
+      } else {
+        lockOverlay.classList.remove('hidden');
+        document.getElementById('lockedVideoTitle').innerText = `${course.title} (Locked)`;
+        videoPlayer.pause();
+      }
+
+      document.getElementById('live-room').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // PREVIEW COURSE TRAILER
+    function previewCourseModal(courseId) {
+      playCourseInArena(courseId);
+    }
+
+    // TRIGGER PURCHASE FOR CURRENTLY LOCKED VIDEO
+    function triggerLockedPurchase() {
+      if (!currentActiveCourse) return;
+      openPaymentModal({
+        id: currentActiveCourse.id,
+        title: currentActiveCourse.title,
+        price: currentActiveCourse.price,
+        type: 'single'
+      });
+    }
+
+    // ==================== DYNAMIC ANTI-PIRACY WATERMARK ====================
+    let watermarkX = 50;
+    let watermarkY = 50;
+    let watermarkDX = 1.2;
+    let watermarkDY = 0.9;
+
+    function initDynamicWatermark() {
+      const canvas = document.getElementById('watermarkCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      function resizeCanvas() {
+        const wrapper = document.getElementById('videoWrapper');
+        if (wrapper) {
+          canvas.width = wrapper.clientWidth;
+          canvas.height = wrapper.clientHeight;
+        }
+      }
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      function drawWatermark() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Watermark text: Student Name + Formatted Phone + Timestamp
+        const studentInfo = currentUser 
+          ? `${currentUser.name} | +91 ${currentUser.phone} | ID: ${currentUser.email}`
+          : `Ayesha Salon & Academy Protected Content | ${new Date().toLocaleTimeString()}`;
+
+        ctx.font = "bold 13px 'Plus Jakarta Sans', sans-serif";
+        ctx.fillStyle = "rgba(255, 255, 255, 0.28)";
+        ctx.shadowColor = "rgba(0, 0, 0, 0.7)";
+        ctx.shadowBlur = 4;
+
+        // Bounce Animation
+        watermarkX += watermarkDX;
+        watermarkY += watermarkDY;
+
+        if (watermarkX + 280 > canvas.width || watermarkX < 20) watermarkDX = -watermarkDX;
+        if (watermarkY + 30 > canvas.height || watermarkY < 30) watermarkDY = -watermarkDY;
+
+        ctx.fillText(`🔒 ${studentInfo}`, watermarkX, watermarkY);
+
+        // Second subtle static watermark in corner
+        ctx.font = "10px sans-serif";
+        ctx.fillStyle = "rgba(234, 176, 52, 0.2)";
+        ctx.fillText(`Ayesha Salon & Academy Anti-Piracy ID: #AS-${Date.now().toString().slice(-6)}`, 20, canvas.height - 15);
+
+        requestAnimationFrame(drawWatermark);
+      }
+      drawWatermark();
+    }
+
+    // ==================== AUTH MODAL HANDLERS ====================
+    function openAuthModal() {
+      document.getElementById('authModal').classList.remove('hidden');
+    }
+    function closeAuthModal() {
+      document.getElementById('authModal').classList.add('hidden');
+    }
+
+    function handleGoogleSignIn() {
+      currentUser = {
+        name: "Aisha Shaikh (Google)",
+        phone: "76 78 03 04 05",
+        email: "aisha.shaikh@gmail.com",
+        isVIP: false,
+        unlockedCourses: [1]
+      };
+      saveCurrentUser();
+      recordStudentLead(currentUser.name, currentUser.phone, currentUser.email, "Google Login Lead", 0);
+      updateNavAuthUI();
+      closeAuthModal();
+      alert(`Welcome, ${currentUser.name}! You are now logged in to Ayesha Salon & Academy.`);
+      renderCourses();
+    }
+
+    function handleMobileAuth(e) {
+      e.preventDefault();
+      const name = document.getElementById('authStudentName').value;
+      let rawPhone = document.getElementById('authStudentPhone').value.replace(/\D/g, '');
+      const email = document.getElementById('authStudentEmail').value;
+
+      let formattedPhone = rawPhone.replace(/(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4 $5");
+
+      currentUser = {
+        name: name,
+        phone: formattedPhone || rawPhone,
+        email: email,
+        isVIP: false,
+        unlockedCourses: []
+      };
+      saveCurrentUser();
+      recordStudentLead(name, formattedPhone || rawPhone, email, "Mobile Verified Lead", 0);
+      updateNavAuthUI();
+      closeAuthModal();
+      alert(`Welcome ${name}! Mobile verification successful at Ayesha Salon & Academy.`);
+      renderCourses();
+    }
+
+    function recordStudentLead(name, phone, email, course, amount) {
+      const existing = studentLeads.find(s => s.phone.replace(/\s+/g,'') === phone.replace(/\s+/g,''));
+      if (!existing) {
+        studentLeads.unshift({
+          id: `AS-${Date.now().toString().slice(-4)}`,
+          name: name,
+          phone: phone,
+          email: email,
+          course: course,
+          amountPaid: amount,
+          status: amount > 0 ? "Paid Student" : "Registered Lead",
+          date: new Date().toISOString().split('T')[0]
+        });
+        saveStudentLeads();
+        renderAdminStats();
+      }
+    }
+
+    function updateNavAuthUI() {
+      const container = document.getElementById('navAuthContainer');
+      if (!container) return;
+
+      if (currentUser) {
+        container.innerHTML = `
+          <div class="flex items-center gap-2">
+            <div class="w-9 h-9 rounded-full bg-brand-700 text-white flex items-center justify-center font-bold text-xs border border-gold-400/40">
+              ${currentUser.name.charAt(0)}
+            </div>
+            <div class="hidden sm:block text-left">
+              <div class="text-xs font-bold text-white">${currentUser.name.split(' ')[0]}</div>
+              <div class="text-[10px] text-gold-400">${currentUser.isVIP ? 'VIP All-Access' : 'Student'}</div>
+            </div>
+            <button onclick="logoutStudent()" class="text-gray-400 hover:text-red-400 p-1.5" title="Logout">
+              <i data-lucide="log-out" class="w-4 h-4"></i>
+            </button>
+          </div>
+        `;
+      } else {
+        container.innerHTML = `
+          <button onclick="openAuthModal()" class="btn-rose text-xs sm:text-sm px-4 py-2.5 rounded-full flex items-center gap-2 font-medium">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span>Student Login</span>
+          </button>
+        `;
+      }
+      lucide.createIcons();
+    }
+
+    function logoutStudent() {
+      currentUser = null;
+      localStorage.removeItem('ayesha_current_user');
+      updateNavAuthUI();
+      renderCourses();
+      alert('Logged out successfully.');
+    }
+
+    // ==================== PAYMENT CHECKOUT ====================
+    function openPaymentModal(item) {
+      if (!currentUser) {
+        alert('Please login or enter your Mobile number first so we can activate your course access.');
+        openAuthModal();
+        return;
+      }
+      activePurchasingItem = item;
+      document.getElementById('checkoutCourseTitle').innerText = item.title;
+      document.getElementById('checkoutCourseName').innerText = item.title;
+      document.getElementById('checkoutAmountText').innerText = `₹${item.price}`;
+      document.getElementById('paymentModal').classList.remove('hidden');
+    }
+
+    function closePaymentModal() {
+      document.getElementById('paymentModal').classList.add('hidden');
+    }
+
+    function processCoursePayment() {
+      if (!activePurchasingItem) return;
+
+      const btn = document.getElementById('payBtn');
+      const btnText = document.getElementById('payBtnText');
+      btnText.innerText = "Processing UPI Payment...";
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btnText.innerText = "Payment Successful!";
+        
+        // Unlock course or VIP subscription
+        if (activePurchasingItem.type === 'subscription' || activePurchasingItem.id === 'vip_lifetime') {
+          currentUser.isVIP = true;
+        } else {
+          if (!currentUser.courseAccess) currentUser.courseAccess = {};
+          
+          const purchaseDate = new Date();
+          const expiryDate = new Date();
+          expiryDate.setDate(purchaseDate.getDate() + 30); // 30-Day Expiry!
+
+          currentUser.courseAccess[activePurchasingItem.id] = {
+            purchaseDate: purchaseDate.toISOString().split('T')[0],
+            expiryDate: expiryDate.toISOString().split('T')[0],
+            isLifetime: false
+          };
+        }
+        saveCurrentUser();
+
+        // Update Student Lead CRM Record
+        const lead = studentLeads.find(s => s.phone.replace(/\s+/g,'') === currentUser.phone.replace(/\s+/g,''));
+        if (lead) {
+          lead.course = activePurchasingItem.title;
+          lead.amountPaid = (lead.amountPaid || 0) + activePurchasingItem.price;
+          lead.status = "Paid & Active";
+        } else {
+          studentLeads.unshift({
+            id: `AS-${Date.now().toString().slice(-4)}`,
+            name: currentUser.name,
+            phone: currentUser.phone,
+            email: currentUser.email,
+            course: activePurchasingItem.title,
+            amountPaid: activePurchasingItem.price,
+            status: "Paid & Active",
+            date: new Date().toISOString().split('T')[0]
+          });
+        }
+        saveStudentLeads();
+        renderAdminStats();
+
+        closePaymentModal();
+        alert(`🎉 Payment of ₹${activePurchasingItem.price} received! Your masterclass has been unlocked for 30 Days (or Lifetime VIP).`);
+        
+        renderCourses();
+        if (activePurchasingItem.type !== 'subscription') {
+          playCourseInArena(activePurchasingItem.id);
+        }
+
+        btn.disabled = false;
+        btnText.innerText = "Pay Now & Unlock Instantly";
+      }, 1200);
+    }
+
+    // ==================== 2-TIER ADMIN AUTHENTICATION & SECURITY ====================
+    const DEFAULT_CLIENT_CREDS = { user: "ayeshasalon", pass: "ayesha@salon2026" };
+    const SUPERADMIN_CREDS = { user: "superadmin", pass: "admin@master2026" };
+
+    let clientCreds = JSON.parse(localStorage.getItem('ayesha_client_creds')) || DEFAULT_CLIENT_CREDS;
+    let currentAdminSession = JSON.parse(sessionStorage.getItem('ayesha_admin_session')) || null;
+
+    function toggleAdminPanel() {
+      if (!currentAdminSession) {
+        document.getElementById('adminLoginUser').value = "";
+        document.getElementById('adminLoginPass').value = "";
+        document.getElementById('adminAuthModal').classList.remove('hidden');
+        lucide.createIcons();
+        return;
+      }
+
+      openAdminDashboard();
+    }
+
+    function closeAdminAuthModal() {
+      document.getElementById('adminAuthModal').classList.add('hidden');
+    }
+
+    function toggleAdminPassVisibility() {
+      const passInput = document.getElementById('adminLoginPass');
+      if (passInput.type === 'password') {
+        passInput.type = 'text';
+      } else {
+        passInput.type = 'password';
+      }
+    }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      const user = document.getElementById('adminLoginUser').value.trim();
+      const pass = document.getElementById('adminLoginPass').value.trim();
+
+      // Check Super Admin / Master Developer
+      if (user === SUPERADMIN_CREDS.user && pass === SUPERADMIN_CREDS.pass) {
+        currentAdminSession = { role: "super_admin", label: "Master Developer (Full Control)" };
+        sessionStorage.setItem('ayesha_admin_session', JSON.stringify(currentAdminSession));
+        closeAdminAuthModal();
+        openAdminDashboard();
+        alert("👑 Welcome Super Admin! Master Developer Mode Activated with full platform controls.");
+        return;
+      }
+
+      // Check Client / Salon Manager
+      if (user.toLowerCase() === clientCreds.user.toLowerCase() && pass === clientCreds.pass) {
+        currentAdminSession = { role: "salon_manager", label: "Salon Manager (Media & Leads)" };
+        sessionStorage.setItem('ayesha_admin_session', JSON.stringify(currentAdminSession));
+        closeAdminAuthModal();
+        openAdminDashboard();
+        alert("✨ Welcome Ayesha Salon & Academy Manager! You are now logged in.");
+        return;
+      }
+
+      alert("❌ Invalid Credentials! Please enter correct Admin User ID and Password.");
+    }
+
+    function handleAdminLogout() {
+      currentAdminSession = null;
+      sessionStorage.removeItem('ayesha_admin_session');
+      closeAdminPanel();
+      alert("🔒 Admin signed out successfully.");
+    }
+
+    function closeAdminPanel() {
+      document.getElementById('adminPanelModal').classList.add('hidden');
+    }
+
+    function openAdminDashboard() {
+      const modal = document.getElementById('adminPanelModal');
+      modal.classList.remove('hidden');
+
+      // Update Role Badge
+      const badge = document.getElementById('currentAdminRoleBadge');
+      const devTabBtn = document.getElementById('adminTabDev');
+
+      if (currentAdminSession.role === 'super_admin') {
+        badge.className = "px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-950 text-purple-300 border border-purple-500/40";
+        badge.innerText = "👑 Master Developer (Full Control & Security)";
+        devTabBtn.classList.remove('hidden');
+        document.getElementById('devClientUser').value = clientCreds.user;
+        document.getElementById('devClientPass').value = clientCreds.pass;
+      } else {
+        badge.className = "px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-green-950 text-green-300 border border-green-500/30";
+        badge.innerText = "🟢 Salon Client Access (Media & Leads Only)";
+        devTabBtn.classList.add('hidden');
+      }
+
+      renderAdminStats();
+      renderStudentLeadsTable();
+      populateManualCourseSelect();
+      switchAdminTab('crm');
+      lucide.createIcons();
+    }
+
+    function switchAdminTab(tab) {
+      const crmSec = document.getElementById('adminCRMSection');
+      const upSec = document.getElementById('adminUploadSection');
+      const medSec = document.getElementById('adminMediaSection');
+      const devSec = document.getElementById('adminDevSection');
+
+      const tabCRM = document.getElementById('adminTabCRM');
+      const tabUpload = document.getElementById('adminTabUpload');
+      const tabMedia = document.getElementById('adminTabMedia');
+      const tabDev = document.getElementById('adminTabDev');
+
+      crmSec.classList.add('hidden');
+      upSec.classList.add('hidden');
+      medSec.classList.add('hidden');
+      if (devSec) devSec.classList.add('hidden');
+
+      tabCRM.className = "px-5 py-2.5 rounded-xl font-bold text-sm text-gray-400 hover:text-white glass-panel whitespace-nowrap";
+      tabUpload.className = "px-5 py-2.5 rounded-xl font-bold text-sm text-gray-400 hover:text-white glass-panel whitespace-nowrap";
+      tabMedia.className = "px-5 py-2.5 rounded-xl font-bold text-sm text-gray-400 hover:text-white glass-panel whitespace-nowrap";
+      if (tabDev) tabDev.className = "px-5 py-2.5 rounded-xl font-bold text-sm text-purple-400 hover:text-purple-300 glass-panel whitespace-nowrap border border-purple-500/30";
+
+      if (tab === 'crm') {
+        crmSec.classList.remove('hidden');
+        tabCRM.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-gold-400 text-dark-900 shadow-md whitespace-nowrap";
+      } else if (tab === 'upload') {
+        upSec.classList.remove('hidden');
+        tabUpload.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-gold-400 text-dark-900 shadow-md whitespace-nowrap";
+      } else if (tab === 'media') {
+        medSec.classList.remove('hidden');
+        tabMedia.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-gold-400 text-dark-900 shadow-md whitespace-nowrap";
+        renderAdminFreeVideosList();
+      } else if (tab === 'dev' && currentAdminSession?.role === 'super_admin') {
+        devSec.classList.remove('hidden');
+        tabDev.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-600 text-white shadow-md whitespace-nowrap border border-purple-400";
+      }
+      lucide.createIcons();
+    }
+
+    function handleUpdateClientCredentials(e) {
+      e.preventDefault();
+      const newUser = document.getElementById('devClientUser').value.trim();
+      const newPass = document.getElementById('devClientPass').value.trim();
+
+      if (!newUser || !newPass) return;
+
+      clientCreds = { user: newUser, pass: newPass };
+      localStorage.setItem('ayesha_client_creds', JSON.stringify(clientCreds));
+      alert(`✅ Client Login credentials updated successfully!\n\nNew User ID: ${newUser}\nNew Password: ${newPass}`);
+    }
+
+    function exportMasterDatabaseJSON() {
+      const dbBackup = {
+        exportedAt: new Date().toISOString(),
+        clientCredentials: clientCreds,
+        courses: appCourses,
+        studentLeads: studentLeads,
+        certificateLocks: certLocks
+      };
+
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dbBackup, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `Ayesha_Salon_Database_Backup_${new Date().toISOString().split('T')[0]}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    }
+
+    function renderAdminStats() {
+      const totalRev = studentLeads.reduce((acc, s) => acc + (Number(s.amountPaid) || 0), 0);
+      document.getElementById('adminTotalStudents').innerText = studentLeads.length;
+      document.getElementById('adminTotalRevenue').innerText = `₹${totalRev.toLocaleString('en-IN')}`;
+      document.getElementById('adminTotalCourses').innerText = appCourses.length;
+      document.getElementById('adminTotalLeads').innerText = studentLeads.filter(s => s.phone).length;
+    }
+
+    function renderStudentLeadsTable() {
+      const tbody = document.getElementById('studentLeadsTableBody');
+      const query = (document.getElementById('leadSearchInput')?.value || '').toLowerCase();
+      
+      const filtered = studentLeads.filter(s => 
+        s.name.toLowerCase().includes(query) ||
+        s.phone.replace(/\s+/g,'').includes(query.replace(/\s+/g,'')) ||
+        s.email.toLowerCase().includes(query) ||
+        s.course.toLowerCase().includes(query)
+      );
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-8 text-gray-500">No student records found matching query.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(s => {
+        const cleanPhone = s.phone.replace(/\D/g, '');
+        return `
+          <tr class="hover:bg-white/5 transition-colors">
+            <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+              <div class="w-7 h-7 rounded-full bg-brand-800 text-white flex items-center justify-center font-bold text-[10px]">
+                ${s.name.charAt(0)}
+              </div>
+              <span>${s.name}</span>
+            </td>
+            <td class="py-3 px-4 text-gray-200 font-mono font-bold tracking-wider">+91 ${s.phone}</td>
+            <td class="py-3 px-4 text-gray-300">${s.email}</td>
+            <td class="py-3 px-4">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold ${s.amountPaid > 0 ? 'bg-green-950 text-green-300 border border-green-500/30' : 'bg-gold-950 text-gold-300 border border-gold-500/30'}">
+                ${s.course}
+              </span>
+            </td>
+            <td class="py-3 px-4 font-bold text-gold-400">₹${s.amountPaid}</td>
+            <td class="py-3 px-4 text-right space-x-2 whitespace-nowrap">
+              <!-- 1-Click WhatsApp Button -->
+              <a href="https://wa.me/91${cleanPhone}?text=Hello%20${encodeURIComponent(s.name)},%20Greetings%20from%20Ayesha%20Salon%20%26%20Academy!%20We%20are%20starting%20our%20new%20batch%20and%20wanted%20to%20share%20the%20details%20with%20you." target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-green-900/60 text-green-300 border border-green-500/30 hover:bg-green-800 text-[11px] font-bold" title="Direct WhatsApp Broadcast">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
+              </a>
+              <!-- 1-Click Call -->
+              <a href="tel:+91${cleanPhone}" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-dark-700 text-gray-300 border border-white/10 hover:bg-dark-600 text-[11px]">
+                <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-400"></i> Call
+              </a>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    // EXPORT TO CSV / EXCEL DOWNLOAD
+    function exportStudentsToCSV() {
+      if (studentLeads.length === 0) {
+        alert("No student data available to export.");
+        return;
+      }
+
+      let csvContent = "data:text/csv;charset=utf-8,";
+      csvContent += "Student ID,Student Name,WhatsApp Number,Gmail Address,Enrolled Course,Amount Paid,Status,Date\r\n";
+
+      studentLeads.forEach(s => {
+        const row = [
+          `"${s.id || ''}"`,
+          `"${s.name || ''}"`,
+          `"${s.phone || ''}"`,
+          `"${s.email || ''}"`,
+          `"${s.course || ''}"`,
+          `"${s.amountPaid || 0}"`,
+          `"${s.status || ''}"`,
+          `"${s.date || ''}"`
+        ].join(",");
+        csvContent += row + "\r\n";
+      });
+
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `Ayesha_Salon_and_Academy_Student_Leads_${new Date().toISOString().split('T')[0]}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // ADD WALK-IN STUDENT MANUALLY
+    function openAddStudentModal() {
+      document.getElementById('addStudentModal').classList.remove('hidden');
+    }
+    function closeAddStudentModal() {
+      document.getElementById('addStudentModal').classList.add('hidden');
+    }
+
+    function populateManualCourseSelect() {
+      const select = document.getElementById('manualCourseSelect');
+      if (!select) return;
+      select.innerHTML = appCourses.map(c => `<option value="${c.title}">${c.title} (₹${c.price})</option>`).join('');
+      select.innerHTML += `<option value="VIP All-Access Pass">VIP All-Access Pass (₹1,499)</option>`;
+    }
+
+    function handleManualStudentAdd(e) {
+      e.preventDefault();
+      const name = document.getElementById('manualName').value;
+      let rawPhone = document.getElementById('manualPhone').value.replace(/\D/g, '');
+      let formattedPhone = rawPhone.replace(/(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4 $5");
+      const email = document.getElementById('manualEmail').value;
+      const course = document.getElementById('manualCourseSelect').value;
+      const amount = Number(document.getElementById('manualAmount').value) || 0;
+
+      studentLeads.unshift({
+        id: `WALK-${Date.now().toString().slice(-4)}`,
+        name: name,
+        phone: formattedPhone || rawPhone,
+        email: email,
+        course: course,
+        amountPaid: amount,
+        status: "Walk-in Paid",
+        date: new Date().toISOString().split('T')[0]
+      });
+
+      saveStudentLeads();
+      renderAdminStats();
+      renderStudentLeadsTable();
+      closeAddStudentModal();
+      alert(`Student ${name} added successfully!`);
+    }
+
+    // CREATE NEW MASTERCLASS
+    function handleCreateNewClass(e) {
+      e.preventDefault();
+      const title = document.getElementById('newClassTitle').value;
+      const type = document.getElementById('newClassType').value;
+      const price = Number(document.getElementById('newClassPrice').value) || 499;
+      const duration = document.getElementById('newClassDuration').value;
+      const videoUrl = document.getElementById('newClassVideoUrl').value;
+      const thumbnail = document.getElementById('newClassThumbnail').value || 'images/enhanced_interior_wide.jpg';
+      const desc = document.getElementById('newClassDesc').value || 'Professional beauty & bridal masterclass by Ayesha Salon & Academy.';
+
+      const newCourse = {
+        id: Date.now(),
+        title: title,
+        type: type,
+        price: price,
+        originalPrice: price * 3,
+        duration: duration,
+        badge: type === 'live' ? 'Live Session' : 'New Release',
+        image: thumbnail,
+        videoUrl: videoUrl,
+        desc: desc
+      };
+
+      appCourses.unshift(newCourse);
+      saveCourses();
+      renderCourses();
+      renderAdminStats();
+      switchAdminTab('crm');
+      alert(`🎉 New Masterclass "${title}" published successfully!`);
+    }
+
+    // ADD FREE PUBLIC VIDEO
+    function handleAddFreeVideo(e) {
+      e.preventDefault();
+      const title = document.getElementById('freeVidTitle').value.trim();
+      const url = document.getElementById('freeVidUrl').value.trim();
+      const poster = document.getElementById('freeVidPoster').value.trim() || 'images/enhanced_interior_chair.jpg';
+      const desc = document.getElementById('freeVidDesc').value.trim() || 'Salon makeover showcase video.';
+
+      if (!title || !url) return;
+
+      const newFreeVid = {
+        id: Date.now(),
+        title: title,
+        url: url,
+        poster: poster,
+        desc: desc
+      };
+
+      freeVideos.unshift(newFreeVid);
+      saveFreeVideos();
+      renderFreeVideos();
+
+      // Clear form inputs
+      document.getElementById('freeVidTitle').value = "";
+      document.getElementById('freeVidUrl').value = "";
+      document.getElementById('freeVidDesc').value = "";
+
+      switchAdminTab('crm');
+      closeAdminPanel();
+      alert(`🎉 Free Video "${title}" successfully added and saved to the showcase!`);
+      document.getElementById('free-videos').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleLocalImageUpload(event, mode) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const base64Image = e.target.result;
+        if (mode === 'create') {
+          document.getElementById('freeVidPoster').value = base64Image;
+          document.getElementById('freeVidFileName').innerText = `✅ Selected: ${file.name}`;
+          const previewCont = document.getElementById('freeVidPreviewContainer');
+          const previewImg = document.getElementById('freeVidPreviewImg');
+          if (previewCont && previewImg) {
+            previewImg.src = base64Image;
+            previewCont.classList.remove('hidden');
+          }
+        } else if (mode === 'edit') {
+          document.getElementById('editFreeVidPoster').value = base64Image;
+          document.getElementById('editFreeVidFileName').innerText = `✅ Selected: ${file.name}`;
+          const previewCont = document.getElementById('editFreeVidPreviewContainer');
+          const previewImg = document.getElementById('editFreeVidPreviewImg');
+          if (previewCont && previewImg) {
+            previewImg.src = base64Image;
+            previewCont.classList.remove('hidden');
+          }
+        }
+        lucide.createIcons();
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function selectFreeVidPoster(img, btn) {
+      document.getElementById('freeVidPoster').value = img;
+      if (btn && btn.parentElement) {
+        btn.parentElement.querySelectorAll('button').forEach(b => {
+          b.className = "p-1.5 rounded-xl border border-white/10 bg-dark-700 text-left hover:border-gold-400 focus:ring-1 focus:ring-gold-400 group";
+        });
+        btn.className = "p-1.5 rounded-xl border border-gold-400 bg-dark-600 text-left ring-2 ring-gold-400/50 group";
+      }
+    }
+
+    function selectEditFreeVidPoster(img, btn) {
+      document.getElementById('editFreeVidPoster').value = img;
+      if (btn && btn.parentElement) {
+        btn.parentElement.querySelectorAll('button').forEach(b => {
+          b.className = "p-1.5 rounded-xl border border-white/10 bg-dark-700 text-left hover:border-gold-400 focus:ring-1 focus:ring-gold-400 group";
+        });
+        btn.className = "p-1.5 rounded-xl border border-gold-400 bg-dark-600 text-left ring-2 ring-gold-400/50 group";
+      }
+    }
+
+    // MANAGE & DELETE FREE VIDEOS
+    function renderAdminFreeVideosList() {
+      const listContainer = document.getElementById('adminFreeVideosList');
+      const countEl = document.getElementById('adminFreeVideosCount');
+      if (!listContainer) return;
+
+      countEl.innerText = `${freeVideos.length} Videos Active`;
+
+      if (freeVideos.length === 0) {
+        listContainer.innerHTML = `
+          <div class="p-6 rounded-2xl bg-dark-800 text-center text-gray-400 text-xs border border-white/5">
+            No videos in showcase. Add your first video using the form above!
+          </div>
+        `;
+        return;
+      }
+
+      listContainer.innerHTML = freeVideos.map(vid => `
+        <div class="p-3.5 rounded-2xl bg-dark-800 border border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3 overflow-hidden">
+            <div class="w-14 h-10 rounded-xl bg-black overflow-hidden shrink-0 border border-white/10">
+              <img src="${vid.poster || 'images/enhanced_interior_chair.jpg'}" alt="${vid.title}" class="w-full h-full object-cover">
+            </div>
+            <div class="min-w-0">
+              <div class="font-bold text-white text-xs truncate">${vid.title}</div>
+              <div class="text-[10px] text-gold-300 truncate">${vid.url}</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 self-end sm:self-auto shrink-0">
+            <button onclick="openEditFreeVideoModal(${vid.id})" class="px-3 py-1.5 rounded-xl bg-gold-400 hover:bg-gold-300 text-dark-900 text-xs font-bold flex items-center gap-1 shadow-md transition-colors">
+              <i data-lucide="edit-3" class="w-3.5 h-3.5 text-dark-900"></i> Rename / Edit
+            </button>
+            <button onclick="deleteFreeVideo(${vid.id})" class="px-3 py-1.5 rounded-xl bg-red-950/90 text-red-300 border border-red-500/30 hover:bg-red-900 text-xs font-bold flex items-center gap-1 transition-colors">
+              <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Delete
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    function openEditFreeVideoModal(id) {
+      const vid = freeVideos.find(v => v.id === id);
+      if (!vid) return;
+
+      document.getElementById('editFreeVidId').value = vid.id;
+      document.getElementById('editFreeVidTitle').value = vid.title;
+      document.getElementById('editFreeVidUrl').value = vid.url;
+      document.getElementById('editFreeVidPoster').value = vid.poster || '';
+      document.getElementById('editFreeVidDesc').value = vid.desc || '';
+
+      document.getElementById('editFreeVideoModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeEditFreeVideoModal() {
+      document.getElementById('editFreeVideoModal').classList.add('hidden');
+    }
+
+    function handleSaveEditedFreeVideo(e) {
+      e.preventDefault();
+      const id = Number(document.getElementById('editFreeVidId').value);
+      const title = document.getElementById('editFreeVidTitle').value.trim();
+      const url = document.getElementById('editFreeVidUrl').value.trim();
+      const poster = document.getElementById('editFreeVidPoster').value.trim();
+      const desc = document.getElementById('editFreeVidDesc').value.trim();
+
+      const index = freeVideos.findIndex(v => v.id === id);
+      if (index !== -1) {
+        freeVideos[index].title = title;
+        freeVideos[index].url = url;
+        freeVideos[index].poster = poster || freeVideos[index].poster;
+        freeVideos[index].desc = desc;
+
+        saveFreeVideos();
+        renderFreeVideos();
+        renderAdminFreeVideosList();
+        closeEditFreeVideoModal();
+        alert(`✅ Video successfully renamed to "${title}"!`);
+      }
+    }
+
+    function deleteFreeVideo(id) {
+      if (!confirm("Kya aap is video ko website se delete karna chahte hain?")) return;
+      freeVideos = freeVideos.filter(v => v.id !== id);
+      saveFreeVideos();
+      renderFreeVideos();
+      renderAdminFreeVideosList();
+      alert("🗑️ Video successfully removed from the website!");
+    }
+
+    // CHAT SYSTEM
+    function handleSendChatMessage(e) {
+      e.preventDefault();
+      const input = document.getElementById('chatInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      const container = document.getElementById('chatMessageContainer');
+      const senderName = currentUser ? currentUser.name : "Guest Student";
+      const initials = senderName.split(' ').map(n => n[0]).join('').substring(0, 2);
+
+      const msgDiv = document.createElement('div');
+      msgDiv.className = "flex items-start gap-2.5";
+      msgDiv.innerHTML = `
+        <div class="w-7 h-7 rounded-full bg-brand-800 text-white flex items-center justify-center font-bold text-[10px]">${initials}</div>
+        <div class="bg-dark-700/80 p-2.5 rounded-2xl rounded-tl-none border border-white/5 max-w-[85%]">
+          <div class="font-bold text-gold-400 text-[10px]">${senderName}</div>
+          <div class="text-gray-200 mt-0.5">${text}</div>
+        </div>
+      `;
+      container.appendChild(msgDiv);
+      container.scrollTop = container.scrollHeight;
+      input.value = "";
+    }
+
+    function askDoubtOnWhatsApp() {
+      const msg = `Hi Ayesha Salon & Academy, I have a doubt regarding the class: "${currentActiveCourse.title}".`;
+      window.open(`https://wa.me/917678030405?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // ==================== ONE-TIME CERTIFICATE LOCKING SYSTEM ====================
+    let certLocks = JSON.parse(localStorage.getItem('ayesha_cert_locks')) || {};
+
+    function downloadCertificate() {
+      if (!currentUser) {
+        alert("Please login or enter your Mobile number first to unlock your course certificate.");
+        openAuthModal();
+        return;
+      }
+
+      const courseId = currentActiveCourse ? currentActiveCourse.id : 1;
+      const userKey = `${currentUser.phone || currentUser.email}_course_${courseId}`;
+
+      // Check if student already locked their name for this certificate
+      if (certLocks[userKey]) {
+        const record = certLocks[userKey];
+        displayLockedCertificate(record.name, record.courseTitle, record.date, record.certId);
+      } else {
+        // Open one-time name input prompt
+        document.getElementById('certInputStudentName').value = currentUser.name || "";
+        document.getElementById('certConfirmCheckbox').checked = false;
+        document.getElementById('certNamePromptModal').classList.remove('hidden');
+        lucide.createIcons();
+      }
+    }
+
+    function closeCertNamePromptModal() {
+      document.getElementById('certNamePromptModal').classList.add('hidden');
+    }
+
+    function handleLockCertificateName(e) {
+      e.preventDefault();
+      const enteredName = document.getElementById('certInputStudentName').value.trim();
+      if (!enteredName) return;
+
+      const courseId = currentActiveCourse ? currentActiveCourse.id : 1;
+      const courseTitle = currentActiveCourse ? currentActiveCourse.title : "Royal HD Bridal & Airbrush Masterclass";
+      const userKey = `${currentUser.phone || currentUser.email}_course_${courseId}`;
+      const issueDate = new Date().toISOString().split('T')[0];
+      const certId = `CERT-AS-${Math.floor(1000 + Math.random() * 9000)}`;
+
+      // Permanently lock the certificate for this student
+      certLocks[userKey] = {
+        name: enteredName,
+        courseTitle: courseTitle,
+        date: issueDate,
+        certId: certId
+      };
+      localStorage.setItem('ayesha_cert_locks', JSON.stringify(certLocks));
+
+      closeCertNamePromptModal();
+      displayLockedCertificate(enteredName, courseTitle, issueDate, certId);
+      alert(`🔒 Official Certificate locked successfully for "${enteredName}"! This name is now permanent.`);
+    }
+
+    function displayLockedCertificate(studentName, courseTitle, issueDate, certId) {
+      document.getElementById('certStudentName').innerText = studentName;
+      document.getElementById('certCourseTitle').innerText = courseTitle;
+      document.getElementById('certIssueDate').innerText = issueDate;
+      document.getElementById('certVerificationCode').innerText = `ID: ${certId}`;
+
+      document.getElementById('certificateModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeCertificateModal() {
+      document.getElementById('certificateModal').classList.add('hidden');
+    }
+
+    function shareCertificateOnWhatsApp() {
+      const studentName = document.getElementById('certStudentName').innerText || "Student";
+      const courseTitle = document.getElementById('certCourseTitle').innerText || "Royal HD Bridal Masterclass";
+      const certId = document.getElementById('certVerificationCode').innerText || "CERT-AS-8941";
+      const msg = `🏆 Proudly sharing my official certificate from Ayesha Salon & Academy, Kausa Mumbra! Verified ${certId} awarded to ${studentName} for completing "${courseTitle}".`;
+      window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // INITIAL LOAD
+    window.addEventListener('DOMContentLoaded', () => {
+      renderFreeVideos();
+      renderCourses();
+      updateNavAuthUI();
+      initDynamicWatermark();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
