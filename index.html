@@ -194,15 +194,15 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Logo & Exact Name -->
-      <a href="#" class="flex items-center gap-3.5 group">
-        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-gold-600 via-brand-500 to-gold-300 p-[2px] shadow-xl shadow-brand-950/60 shrink-0 aspect-square flex items-center justify-center">
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3.5 group min-w-0">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-tr from-gold-600 via-brand-500 to-gold-300 p-[2px] shadow-xl shadow-brand-950/60 shrink-0 aspect-square flex items-center justify-center">
           <img src="logo.jpg" alt="Ayesha Salon & Academy Logo" class="w-full h-full rounded-full object-cover aspect-square perfect-circle-logo group-hover:scale-105 transition-transform duration-300">
         </div>
-        <div>
-          <span class="font-serif text-xl sm:text-2xl font-bold tracking-wide text-white flex items-center gap-1.5">
+        <div class="min-w-0">
+          <div class="font-serif text-sm sm:text-2xl font-bold tracking-wide text-white whitespace-nowrap leading-tight">
             Ayesha <span class="gold-gradient-text">Salon & Academy</span>
-          </span>
-          <span class="text-[10px] text-brand-300 tracking-[0.2em] uppercase block font-semibold">Ladies Salon & Professional Academy • Kausa Mumbra</span>
+          </div>
+          <span class="text-[8px] sm:text-[10px] text-brand-300 tracking-wider uppercase block font-medium truncate mt-0.5">Ladies Salon & Academy • Kausa Mumbra</span>
         </div>
       </a>
 
@@ -597,47 +597,67 @@
       </div>
 
       <!-- Free Video Cards Grid -->
-      <div id="freeVideosGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div id="freeVideosGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- Video 1 -->
-        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group">
-          <div class="relative aspect-video bg-black">
-            <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop">
-              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
-            </video>
+        <!-- Video 1: Skin Analysis Machine -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group flex flex-col justify-between">
+          <div class="relative aspect-video bg-gradient-to-tr from-purple-950 via-pink-950 to-dark-900 group/ig overflow-hidden flex flex-col justify-between p-4">
+            <img src="images/enhanced_interior_wide.jpg" alt="Instagram Reel Poster" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover/ig:scale-105 group-hover/ig:opacity-65 transition-all duration-500">
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-lg">
+                <i data-lucide="instagram" class="w-3.5 h-3.5"></i> Instagram Reel
+              </span>
+              <span class="text-[10px] text-pink-200 font-semibold bg-black/60 px-2 py-0.5 rounded-full border border-pink-500/30">@ayesha_salon_mumbra</span>
+            </div>
+            <div class="relative z-10 text-center my-auto">
+              <a href="https://www.instagram.com/ayesha_salon_mumbra/" target="_blank" class="w-14 h-14 mx-auto rounded-full bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white flex items-center justify-center shadow-2xl group-hover/ig:scale-110 transition-transform">
+                <i data-lucide="play" class="w-7 h-7 fill-current ml-0.5"></i>
+              </a>
+              <div class="text-[11px] font-bold text-white mt-2 drop-shadow">Tap to Watch on Instagram</div>
+            </div>
+            <div class="relative z-10 flex justify-end">
+              <a href="https://www.instagram.com/ayesha_salon_mumbra/" target="_blank" class="bg-pink-600 hover:bg-pink-500 text-white text-[10px] font-bold px-3 py-1.5 rounded-xl border border-white/20 flex items-center gap-1 shadow-lg">
+                <i data-lucide="external-link" class="w-3 h-3"></i> Open in Instagram
+              </a>
+            </div>
           </div>
-          <div class="p-5">
-            <span class="text-[10px] font-bold text-gold-400 uppercase tracking-wider">Free Watch</span>
-            <h4 class="font-serif text-base font-bold text-white mt-1">Bridal HD Makeup Transformation Demo</h4>
-            <p class="text-xs text-gray-400 mt-1">Real bride makeover highlights at Ayesha Salon & Academy Kausa.</p>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-gold-400 uppercase tracking-wider">Free Watch</span>
+              <h4 class="font-serif text-base font-bold text-white mt-1">Skin Analysis Machine</h4>
+              <p class="text-xs text-gray-400 mt-1">Advanced Hydra & Skin Analysis Demonstration at Ayesha Salon & Academy.</p>
+            </div>
           </div>
         </div>
 
-        <!-- Video 2 -->
-        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group">
-          <div class="relative aspect-video bg-black">
-            <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop">
-              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
-            </video>
+        <!-- Video 2: Ayesha Salon Opening -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group flex flex-col justify-between">
+          <div class="relative aspect-video bg-gradient-to-tr from-purple-950 via-pink-950 to-dark-900 group/ig overflow-hidden flex flex-col justify-between p-4">
+            <img src="images/enhanced_interior_lounge.jpg" alt="Instagram Reel Poster" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover/ig:scale-105 group-hover/ig:opacity-65 transition-all duration-500">
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-lg">
+                <i data-lucide="instagram" class="w-3.5 h-3.5"></i> Instagram Reel
+              </span>
+              <span class="text-[10px] text-pink-200 font-semibold bg-black/60 px-2 py-0.5 rounded-full border border-pink-500/30">@ayesha_salon_mumbra</span>
+            </div>
+            <div class="relative z-10 text-center my-auto">
+              <a href="https://www.instagram.com/ayesha_salon_mumbra/" target="_blank" class="w-14 h-14 mx-auto rounded-full bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white flex items-center justify-center shadow-2xl group-hover/ig:scale-110 transition-transform">
+                <i data-lucide="play" class="w-7 h-7 fill-current ml-0.5"></i>
+              </a>
+              <div class="text-[11px] font-bold text-white mt-2 drop-shadow">Tap to Watch on Instagram</div>
+            </div>
+            <div class="relative z-10 flex justify-end">
+              <a href="https://www.instagram.com/ayesha_salon_mumbra/" target="_blank" class="bg-pink-600 hover:bg-pink-500 text-white text-[10px] font-bold px-3 py-1.5 rounded-xl border border-white/20 flex items-center gap-1 shadow-lg">
+                <i data-lucide="external-link" class="w-3 h-3"></i> Open in Instagram
+              </a>
+            </div>
           </div>
-          <div class="p-5">
-            <span class="text-[10px] font-bold text-gold-400 uppercase tracking-wider">Free Watch</span>
-            <h4 class="font-serif text-base font-bold text-white mt-1">Hair Botox & Keratin Shine Result</h4>
-            <p class="text-xs text-gray-400 mt-1">Step-by-step frizz control treatment result video.</p>
-          </div>
-        </div>
-
-        <!-- Video 3 -->
-        <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 group">
-          <div class="relative aspect-video bg-black">
-            <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop">
-              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="p-5">
-            <span class="text-[10px] font-bold text-gold-400 uppercase tracking-wider">Free Watch</span>
-            <h4 class="font-serif text-base font-bold text-white mt-1">Hydra Facial Machine Demo & Glow</h4>
-            <p class="text-xs text-gray-400 mt-1">Deep pore vacuum extraction and instant skin glow.</p>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-gold-400 uppercase tracking-wider">Free Watch</span>
+              <h4 class="font-serif text-base font-bold text-white mt-1">Ayesha Salon Opening</h4>
+              <p class="text-xs text-gray-400 mt-1">Grand Salon & Academy Studio Tour in Kausa Mumbra.</p>
+            </div>
           </div>
         </div>
 
@@ -1936,24 +1956,17 @@
     const DEFAULT_FREE_VIDEOS = [
       {
         id: 1,
-        title: "Bridal HD Makeup Transformation Demo",
-        url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-        poster: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
-        desc: "Real bride makeover highlights at Ayesha Salon & Academy Kausa."
+        title: "Skin Analysis Machine",
+        url: "https://www.instagram.com/reel/C8qX-92t0qX/",
+        poster: "images/enhanced_interior_wide.jpg",
+        desc: "Advanced Hydra & Skin Analysis Demonstration at Ayesha Salon & Academy."
       },
       {
         id: 2,
-        title: "Hair Botox & Keratin Shine Result",
-        url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-        poster: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
-        desc: "Step-by-step frizz control treatment result video."
-      },
-      {
-        id: 3,
-        title: "Hydra Facial Machine Demo & Glow",
-        url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-        poster: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop",
-        desc: "Deep pore vacuum extraction and instant skin glow."
+        title: "Ayesha Salon Opening",
+        url: "https://www.instagram.com/reel/C8qX-92t0qX/",
+        poster: "images/enhanced_interior_lounge.jpg",
+        desc: "Grand Salon & Academy Studio Tour in Kausa Mumbra."
       }
     ];
 
