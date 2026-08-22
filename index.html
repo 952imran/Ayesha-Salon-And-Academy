@@ -191,23 +191,23 @@
 
   <!-- NAVIGATION HEADER -->
   <header class="sticky top-0 z-40 w-full glass-panel border-b border-white/5 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
       
-      <!-- Brand Logo & Exact Name -->
-      <a href="#" class="flex items-center gap-2 sm:gap-3.5 group min-w-0 flex-1">
-        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-tr from-gold-600 via-brand-500 to-gold-300 p-[1.5px] shadow-xl shadow-brand-950/60 shrink-0 aspect-square flex items-center justify-center">
+      <!-- Brand Logo & Exact Name (Left Column - Never Overlaps) -->
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-gradient-to-tr from-gold-600 via-brand-500 to-gold-300 p-[1.5px] shadow-xl shadow-brand-950/60 shrink-0 aspect-square flex items-center justify-center">
           <img src="logo.jpg" alt="Ayesha Salon & Academy Logo" class="w-full h-full rounded-full object-cover aspect-square perfect-circle-logo group-hover:scale-105 transition-transform duration-300">
         </div>
-        <div class="min-w-0">
-          <div class="font-serif text-sm sm:text-xl md:text-2xl font-bold tracking-tight text-white whitespace-nowrap leading-none flex items-center gap-1">
+        <div class="shrink-0">
+          <div class="font-serif text-sm sm:text-lg md:text-xl font-bold tracking-tight text-white whitespace-nowrap leading-tight flex items-center gap-1">
             <span>Ayesha</span> <span class="gold-gradient-text">Salon & Academy</span>
           </div>
-          <span class="text-[8px] sm:text-[10px] text-brand-300 tracking-wider uppercase block font-medium truncate mt-0.5">Kausa Mumbra • Ladies Salon</span>
+          <span class="text-[8px] sm:text-[10px] text-brand-300 tracking-wider uppercase block font-semibold leading-none mt-0.5">Kausa Mumbra • Ladies Salon</span>
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center gap-7 text-xs font-medium text-gray-300">
+      <!-- Desktop Nav Links (Center Column - Only on Large Screens) -->
+      <nav class="hidden xl:flex items-center gap-5 text-xs font-medium text-gray-300">
         <a href="#salon" class="hover:text-gold-300 transition-colors flex items-center gap-1">
           <i data-lucide="scissors" class="w-3.5 h-3.5 text-brand-400"></i> Services
         </a>
@@ -235,25 +235,25 @@
         </a>
       </nav>
 
-      <!-- Action Buttons & Auth Profile -->
-      <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
+      <!-- Action Buttons & Auth Profile (Right Column) -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         <!-- Admin Toggle Button (Desktop Only) -->
-        <button onclick="toggleAdminPanel()" class="text-xs px-3 py-1.5 rounded-lg border border-gold-500/30 text-gold-300 hover:bg-gold-500/10 transition-colors hidden sm:flex items-center gap-1.5 font-medium" title="Ayesha Salon & Academy Admin Dashboard">
+        <button onclick="toggleAdminPanel()" class="text-xs px-3 py-2 rounded-xl border border-gold-500/30 text-gold-300 hover:bg-gold-500/10 transition-colors hidden sm:flex items-center gap-1.5 font-medium" title="Ayesha Salon & Academy Admin Dashboard">
           <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-400"></i>
           <span>Owner Admin</span>
         </button>
 
         <!-- User Logged In State / Auth Trigger -->
         <div id="navAuthContainer">
-          <button onclick="openAuthModal()" class="btn-rose text-xs px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-full flex items-center gap-1.5 font-medium">
-            <i data-lucide="user" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
-            <span class="text-[11px] sm:text-xs">Login</span>
+          <button onclick="openAuthModal()" class="btn-rose text-xs px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full flex items-center gap-1.5 font-medium shadow-md">
+            <i data-lucide="user" class="w-3.5 h-3.5"></i>
+            <span class="text-xs">Student Login</span>
           </button>
         </div>
 
         <!-- Mobile Menu Toggle Button -->
-        <button onclick="toggleMobileMenu()" class="lg:hidden p-1.5 sm:p-2 rounded-xl bg-dark-800 text-gray-200 hover:text-white border border-white/10">
-          <i data-lucide="menu" id="menuIcon" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+        <button onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-xl bg-dark-800 text-gray-200 hover:text-white border border-white/10">
+          <i data-lucide="menu" id="menuIcon" class="w-5 h-5"></i>
         </button>
       </div>
 
