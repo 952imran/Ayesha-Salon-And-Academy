@@ -1567,24 +1567,28 @@
 
   <!-- FLOATING WHATSAPP BUTTON (BOTTOM RIGHT) -->
   <a href="https://wa.me/917678030405?text=Hi%20Ayesha%20Salon%20%26%20Academy,%20I%20have%20a%20query%20about%20Salon%20services%20and%20Academy%20classes." target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white/20" title="Chat on WhatsApp (+91 76 78 03 04 05)">
-    <i data-lucide="message-circle" class="w-7 h-7 fill-current"></i>
-  </a>
-
   <!-- FLOATING AI VOICE CALL ROUND CIRCLE BUTTON (BOTTOM LEFT - ROUND & CLEAN) -->
   <div class="fixed bottom-6 left-6 z-40 flex flex-col items-center gap-1.5">
     <!-- Small Live Badge Above Button -->
-    <span id="aiCallBadge" class="bg-gray-900/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-lg flex items-center gap-1 border border-white/20 select-none">
+    <span id="aiCallBadge" class="bg-gray-900/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-lg flex items-center gap-1 border border-white/20 select-none pointer-events-none">
       <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></span> AI Call
     </span>
 
-    <!-- Round Circle Call Button (Green Before Call -> Red In Call) -->
-    <button id="aiCallCircleBtn" onclick="toggleAICallState()" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 border-2 border-white/40 focus:outline-none" title="Call Ayesha AI Voice Assistant">
-      <i id="aiCallIcon" data-lucide="phone-call" class="w-7 h-7 text-white fill-current"></i>
-    </button>
+    <!-- Round Circle Call Button Container -->
+    <div class="relative w-14 h-14 rounded-full shadow-2xl hover:scale-110 transition-all duration-300">
+      <!-- Visual Green / Red Button -->
+      <div id="aiCallCircleBtn" class="w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center border-2 border-white/40 shadow-2xl transition-all duration-300">
+        <i id="aiCallIcon" data-lucide="phone-call" class="w-7 h-7 text-white fill-current"></i>
+      </div>
 
-    <!-- In-Page Audio Connection Stream -->
-    <iframe id="aiCallIframe" src="" allow="microphone; camera" class="w-0 h-0 border-0 absolute pointer-events-none opacity-0"></iframe>
+      <!-- Real-Time ElevenLabs WebRTC Voice Trigger Layer -->
+      <div class="absolute inset-0 rounded-full cursor-pointer z-10 opacity-0 overflow-hidden" onclick="handleVoiceCallTap()">
+        <elevenlabs-convai agent-id="agent_7101m0qnc52afm2rfhh4s7j1g0zc" id="convaiWidgetEl" class="w-full h-full"></elevenlabs-convai>
+      </div>
+    </div>
   </div>
+
+  <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
   <!-- ==================== JAVASCRIPT APPLICATION CORE ==================== -->
   <script>
@@ -3027,31 +3031,27 @@
     let aiCallSeconds = 0;
     let aiCallInterval = null;
 
-    function toggleAICallState() {
+    function handleVoiceCallTap() {
       const btn = document.getElementById('aiCallCircleBtn');
       const icon = document.getElementById('aiCallIcon');
       const badge = document.getElementById('aiCallBadge');
-      const iframe = document.getElementById('aiCallIframe');
 
       if (!isInCall) {
         // START CALL -> TURN BUTTON VIBRANT RED
         isInCall = true;
-        btn.classList.remove('bg-emerald-500', 'hover:bg-emerald-600');
-        btn.classList.add('bg-red-600', 'hover:bg-red-700', 'animate-pulse');
+        btn.classList.remove('bg-emerald-500');
+        btn.classList.add('bg-red-600', 'animate-pulse');
         btn.title = "Cut / End Call";
 
         badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-red-400 animate-ping"></span> <span id="aiTimerText">00:00</span> (Cut)`;
         badge.classList.remove('bg-gray-900/90');
         badge.classList.add('bg-red-900/95');
 
-        // Connect in-page ElevenLabs voice call stream
-        iframe.src = "https://elevenlabs.io/app/talk-to?agent_id=agent_7101m0qnc52afm2rfhh4s7j1g0zc&branch_id=agtbrch_3101m0qnc5mken7a1qcmxh1jajkb";
-
         // Re-render icon to Phone-Off (Cut Call)
         icon.setAttribute('data-lucide', 'phone-off');
         lucide.createIcons();
 
-        // Start Live Timer
+        // Start Live Call Timer
         aiCallSeconds = 0;
         clearInterval(aiCallInterval);
         aiCallInterval = setInterval(() => {
@@ -3066,10 +3066,9 @@
         // END CALL -> TURN BUTTON VIBRANT GREEN
         isInCall = false;
         clearInterval(aiCallInterval);
-        iframe.src = ""; // Hang up call and terminate audio stream immediately
 
-        btn.classList.remove('bg-red-600', 'hover:bg-red-700', 'animate-pulse');
-        btn.classList.add('bg-emerald-500', 'hover:bg-emerald-600');
+        btn.classList.remove('bg-red-600', 'animate-pulse');
+        btn.classList.add('bg-emerald-500');
         btn.title = "Call Ayesha AI Voice Assistant";
 
         badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></span> AI Call`;
