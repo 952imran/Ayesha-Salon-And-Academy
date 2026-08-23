@@ -1579,15 +1579,19 @@
     <i data-lucide="message-circle" class="w-7 h-7 fill-current"></i>
   </a>
 
-  <!-- FLOATING AI VOICE CALL ROUND BUTTON (BOTTOM LEFT - PHONE POPUP SESSION) -->
-  <div class="fixed bottom-6 left-6 z-50 flex flex-col items-center gap-1.5">
-    <span id="aiCallBadge" class="bg-gray-900/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-lg flex items-center gap-1 border border-white/20 select-none pointer-events-none">
-      <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></span> AI Call
-    </span>
-    <button onclick="openInPageVoiceCall()" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 border-2 border-white/40 focus:outline-none cursor-pointer" title="Call Ayesha AI Voice Assistant">
-      <i data-lucide="phone-call" class="w-7 h-7 text-white fill-current"></i>
-    </button>
-  </div>
+  <!-- FLOATING ELEVENLABS REAL-TIME AI VOICE WIDGET (BOTTOM LEFT - 100% ON-PAGE, NO POPUPS, NO REDIRECTS) -->
+  <elevenlabs-convai 
+    agent-id="agent_7101m0qnc52afm2rfhh4s7j1g0zc"
+    variant="compact"
+    action-text="AI Call"
+    start-call-text="Start Call"
+    end-call-text="End Call"
+    avatar-image-url="logo.jpg"
+    avatar-orb-color-1="#861734"
+    avatar-orb-color-2="#e04369">
+  </elevenlabs-convai>
+
+  <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
   <!-- ==================== JAVASCRIPT APPLICATION CORE ==================== -->
   <script>
@@ -3023,17 +3027,6 @@
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
       menu.classList.toggle('hidden');
-    }
-
-    // ==================== AI VOICE CALL HANDLER ====================
-    function openInPageVoiceCall() {
-      const url = "https://elevenlabs.io/app/talk-to?agent_id=agent_7101m0qnc52afm2rfhh4s7j1g0zc&branch_id=agtbrch_3101m0qnc5mken7a1qcmxh1jajkb";
-      const w = 420;
-      const h = 640;
-      const left = Math.max(0, Math.floor((window.screen.width - w) / 2));
-      const top = Math.max(0, Math.floor((window.screen.height - h) / 2));
-      
-      window.open(url, "AyeshaSalonAICall", `width=${w},height=${h},top=${top},left=${left},resizable=yes,scrollbars=yes,status=no,toolbar=no,menubar=no,location=no`);
     }
 
     // INITIAL LOAD
