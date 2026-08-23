@@ -108,6 +108,15 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
+    /* Fixed Bottom-Left Positioning for ElevenLabs ConvAI Agent Widget */
+    elevenlabs-convai {
+      position: fixed !important;
+      bottom: 24px !important;
+      left: 24px !important;
+      right: auto !important;
+      z-index: 50 !important;
+    }
     .rose-gradient-text {
       background: linear-gradient(135deg, #c52850 0%, #e04369 50%, #861734 100%);
       -webkit-background-clip: text;
@@ -1570,26 +1579,17 @@
     <i data-lucide="message-circle" class="w-7 h-7 fill-current"></i>
   </a>
 
-  <!-- FLOATING AI VOICE CALL ROUND BUTTON (BOTTOM LEFT ONLY - FIXED SEPARATION) -->
-  <div style="position: fixed; bottom: 24px; left: 24px; z-index: 40;" class="flex flex-col items-center gap-1.5">
-    <!-- Small Live Badge Above Button -->
-    <span id="aiCallBadge" class="bg-gray-900/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-lg flex items-center gap-1 border border-white/20 select-none pointer-events-none">
-      <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></span> AI Call
-    </span>
-
-    <!-- Round Circle Call Button Container -->
-    <div class="relative w-14 h-14 rounded-full shadow-2xl hover:scale-110 transition-all duration-300">
-      <!-- Visual Green / Red Button -->
-      <div id="aiCallCircleBtn" class="w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center border-2 border-white/40 shadow-2xl transition-all duration-300">
-        <i id="aiCallIcon" data-lucide="phone-call" class="w-7 h-7 text-white fill-current"></i>
-      </div>
-
-      <!-- Real-Time ElevenLabs WebRTC Voice Trigger Layer -->
-      <div class="absolute inset-0 rounded-full cursor-pointer z-10 opacity-0 overflow-hidden" onclick="handleVoiceCallTap()">
-        <elevenlabs-convai agent-id="agent_7101m0qnc52afm2rfhh4s7j1g0zc" id="convaiWidgetEl" class="w-full h-full"></elevenlabs-convai>
-      </div>
-    </div>
-  </div>
+  <!-- FLOATING ELEVENLABS REAL-TIME AI VOICE CALL WIDGET (BOTTOM LEFT - USES YOUR EXACT VOICE & DIALOGUES) -->
+  <elevenlabs-convai 
+    agent-id="agent_7101m0qnc52afm2rfhh4s7j1g0zc"
+    variant="compact"
+    action-text="AI Call"
+    start-call-text="Start Call"
+    end-call-text="End Call"
+    avatar-image-url="logo.jpg"
+    avatar-orb-color-1="#861734"
+    avatar-orb-color-2="#e04369">
+  </elevenlabs-convai>
 
   <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
@@ -3027,61 +3027,6 @@
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
       menu.classList.toggle('hidden');
-    }
-
-    // ==================== IN-PAGE AI VOICE CALL HANDLERS ====================
-    let isInCall = false;
-    let aiCallSeconds = 0;
-    let aiCallInterval = null;
-
-    function handleVoiceCallTap() {
-      const btn = document.getElementById('aiCallCircleBtn');
-      const icon = document.getElementById('aiCallIcon');
-      const badge = document.getElementById('aiCallBadge');
-
-      if (!isInCall) {
-        // START CALL -> TURN BUTTON VIBRANT RED
-        isInCall = true;
-        btn.classList.remove('bg-emerald-500');
-        btn.classList.add('bg-red-600', 'animate-pulse');
-        btn.title = "Cut / End Call";
-
-        badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-red-400 animate-ping"></span> <span id="aiTimerText">00:00</span> (Cut)`;
-        badge.classList.remove('bg-gray-900/90');
-        badge.classList.add('bg-red-900/95');
-
-        // Re-render icon to Phone-Off (Cut Call)
-        icon.setAttribute('data-lucide', 'phone-off');
-        lucide.createIcons();
-
-        // Start Live Call Timer
-        aiCallSeconds = 0;
-        clearInterval(aiCallInterval);
-        aiCallInterval = setInterval(() => {
-          aiCallSeconds++;
-          const mins = String(Math.floor(aiCallSeconds / 60)).padStart(2, '0');
-          const secs = String(aiCallSeconds % 60).padStart(2, '0');
-          const timerEl = document.getElementById('aiTimerText');
-          if (timerEl) timerEl.innerText = `${mins}:${secs}`;
-        }, 1000);
-
-      } else {
-        // END CALL -> TURN BUTTON VIBRANT GREEN
-        isInCall = false;
-        clearInterval(aiCallInterval);
-
-        btn.classList.remove('bg-red-600', 'animate-pulse');
-        btn.classList.add('bg-emerald-500');
-        btn.title = "Call Ayesha AI Voice Assistant";
-
-        badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></span> AI Call`;
-        badge.classList.remove('bg-red-900/95');
-        badge.classList.add('bg-gray-900/90');
-
-        // Re-render icon to Phone-Call
-        icon.setAttribute('data-lucide', 'phone-call');
-        lucide.createIcons();
-      }
     }
 
     // INITIAL LOAD
