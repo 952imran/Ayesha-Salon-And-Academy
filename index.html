@@ -1579,44 +1579,14 @@
     <i data-lucide="message-circle" class="w-7 h-7 fill-current"></i>
   </a>
 
-  <!-- FLOATING AI VOICE CALL (BOTTOM LEFT - IN-PAGE DIALOG, NO NEW TAB, EXACT BRANCH VOICE) -->
-  <div id="inPageVoiceCallWrap" class="fixed bottom-6 left-6 z-50 flex flex-col items-start gap-2">
-    <!-- Active In-Page Call Card (Opens directly on website) -->
-    <div id="inPageVoiceCallCard" class="hidden w-80 sm:w-96 h-[480px] sm:h-[520px] bg-white/98 backdrop-blur-2xl rounded-3xl shadow-2xl border-2 border-gold-400/90 overflow-hidden flex-col animate-in fade-in zoom-in-95 duration-200">
-      <!-- Card Header -->
-      <div class="px-4 py-3 bg-gradient-to-r from-brand-900 via-rose-900 to-brand-950 text-white flex items-center justify-between border-b border-gold-400/30 shrink-0">
-        <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-full bg-gold-400 p-[1.5px] shrink-0">
-            <img src="logo.jpg" alt="Ayesha Salon" class="w-full h-full rounded-full object-cover">
-          </div>
-          <div>
-            <div class="text-xs font-bold text-gold-200 leading-tight">Ayesha AI Assistant</div>
-            <div class="text-[10px] text-green-400 font-medium flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></span> Live Voice Call
-            </div>
-          </div>
-        </div>
-        <!-- End Call Button in Header -->
-        <button onclick="closeInPageVoiceCall()" class="px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl shadow transition-colors flex items-center gap-1.5 cursor-pointer" title="Cut / End Call">
-          <i data-lucide="phone-off" class="w-3.5 h-3.5"></i> End Call
-        </button>
-      </div>
-
-      <!-- In-Page Live ElevenLabs Voice Session Viewport -->
-      <div class="w-full flex-1 bg-gray-900 relative">
-        <iframe id="inPageVoiceFrame" src="" allow="microphone; camera; autoplay; clipboard-write; encrypted-media; fullscreen" class="w-full h-full border-0"></iframe>
-      </div>
-    </div>
-
-    <!-- Collapsed Trigger Button (Green Round Circle) -->
-    <div id="inPageVoiceTrigger" class="flex flex-col items-center gap-1.5">
-      <span id="aiCallBadge" class="bg-gray-900/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-lg flex items-center gap-1 border border-white/20 select-none pointer-events-none">
-        <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></span> AI Call
-      </span>
-      <button onclick="openInPageVoiceCall()" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 border-2 border-white/40 focus:outline-none cursor-pointer" title="Call Ayesha AI Voice Assistant">
-        <i data-lucide="phone-call" class="w-7 h-7 text-white fill-current"></i>
-      </button>
-    </div>
+  <!-- FLOATING AI VOICE CALL ROUND BUTTON (BOTTOM LEFT - PHONE POPUP SESSION) -->
+  <div class="fixed bottom-6 left-6 z-50 flex flex-col items-center gap-1.5">
+    <span id="aiCallBadge" class="bg-gray-900/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-lg flex items-center gap-1 border border-white/20 select-none pointer-events-none">
+      <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></span> AI Call
+    </span>
+    <button onclick="openInPageVoiceCall()" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 border-2 border-white/40 focus:outline-none cursor-pointer" title="Call Ayesha AI Voice Assistant">
+      <i data-lucide="phone-call" class="w-7 h-7 text-white fill-current"></i>
+    </button>
   </div>
 
   <!-- ==================== JAVASCRIPT APPLICATION CORE ==================== -->
@@ -3055,28 +3025,15 @@
       menu.classList.toggle('hidden');
     }
 
-    // ==================== IN-PAGE AI VOICE CALL HANDLERS ====================
+    // ==================== AI VOICE CALL HANDLER ====================
     function openInPageVoiceCall() {
-      document.getElementById('inPageVoiceTrigger').classList.add('hidden');
-      const card = document.getElementById('inPageVoiceCallCard');
-      card.classList.remove('hidden');
-      card.classList.add('flex');
+      const url = "https://elevenlabs.io/app/talk-to?agent_id=agent_7101m0qnc52afm2rfhh4s7j1g0zc&branch_id=agtbrch_3101m0qnc5mken7a1qcmxh1jajkb";
+      const w = 420;
+      const h = 640;
+      const left = Math.max(0, Math.floor((window.screen.width - w) / 2));
+      const top = Math.max(0, Math.floor((window.screen.height - h) / 2));
       
-      // Load the exact working ElevenLabs branch session directly inside the in-page card
-      const frame = document.getElementById('inPageVoiceFrame');
-      frame.src = "https://elevenlabs.io/app/talk-to?agent_id=agent_7101m0qnc52afm2rfhh4s7j1g0zc&branch_id=agtbrch_3101m0qnc5mken7a1qcmxh1jajkb";
-      lucide.createIcons();
-    }
-
-    function closeInPageVoiceCall() {
-      const frame = document.getElementById('inPageVoiceFrame');
-      frame.src = ""; // Unload to immediately cut audio and hang up
-      
-      const card = document.getElementById('inPageVoiceCallCard');
-      card.classList.add('hidden');
-      card.classList.remove('flex');
-      document.getElementById('inPageVoiceTrigger').classList.remove('hidden');
-      lucide.createIcons();
+      window.open(url, "AyeshaSalonAICall", `width=${w},height=${h},top=${top},left=${left},resizable=yes,scrollbars=yes,status=no,toolbar=no,menubar=no,location=no`);
     }
 
     // INITIAL LOAD
