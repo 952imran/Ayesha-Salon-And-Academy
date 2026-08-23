@@ -1565,10 +1565,13 @@
     </div>
   </div>
 
-  <!-- FLOATING WHATSAPP BUTTON (BOTTOM RIGHT) -->
-  <a href="https://wa.me/917678030405?text=Hi%20Ayesha%20Salon%20%26%20Academy,%20I%20have%20a%20query%20about%20Salon%20services%20and%20Academy%20classes." target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white/20" title="Chat on WhatsApp (+91 76 78 03 04 05)">
-  <!-- FLOATING AI VOICE CALL ROUND CIRCLE BUTTON (BOTTOM LEFT - ROUND & CLEAN) -->
-  <div class="fixed bottom-6 left-6 z-40 flex flex-col items-center gap-1.5">
+  <!-- FLOATING WHATSAPP BUTTON (BOTTOM RIGHT ONLY) -->
+  <a href="https://wa.me/917678030405?text=Hi%20Ayesha%20Salon%20%26%20Academy,%20I%20have%20a%20query%20about%20Salon%20services%20and%20Academy%20classes." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white/20" title="Chat on WhatsApp (+91 76 78 03 04 05)">
+    <i data-lucide="message-circle" class="w-7 h-7 fill-current"></i>
+  </a>
+
+  <!-- FLOATING AI VOICE CALL ROUND BUTTON (BOTTOM LEFT ONLY - FIXED SEPARATION) -->
+  <div style="position: fixed; bottom: 24px; left: 24px; z-index: 40;" class="flex flex-col items-center gap-1.5">
     <!-- Small Live Badge Above Button -->
     <span id="aiCallBadge" class="bg-gray-900/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-lg flex items-center gap-1 border border-white/20 select-none pointer-events-none">
       <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></span> AI Call
